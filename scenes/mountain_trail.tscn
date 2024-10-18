@@ -1,6 +1,5 @@
-[gd_scene load_steps=7 format=3 uid="uid://c521td2cttlo"]
+[gd_scene load_steps=5 format=3 uid="uid://c521td2cttlo"]
 
-[ext_resource type="Texture2D" uid="uid://v22s4lhee4oc" path="res://assets/pictures/123.jpg" id="1_jnl3n"]
 [ext_resource type="Texture2D" uid="uid://vcc23hslq85f" path="res://assets/pictures/trail.jpg" id="2_qnwh2"]
 [ext_resource type="AudioStream" uid="uid://ne1qtoo044vg" path="res://audio/environment/switch-noises-97673.mp3" id="3_dcku7"]
 
@@ -11,9 +10,6 @@ b = Vector2(-319.514, 48.0815)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_8x652"]
 a = Vector2(-308.863, 48.0815)
 b = Vector2(-873.337, 37.3967)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0l8fp"]
-size = Vector2(300.376, 235.353)
 
 [node name="mountain trail" type="Node2D"]
 position = Vector2(15, 42)
