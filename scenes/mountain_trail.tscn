@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c521td2cttlo"]
+[gd_scene load_steps=9 format=3 uid="uid://c521td2cttlo"]
 
 [ext_resource type="Texture2D" uid="uid://vcc23hslq85f" path="res://assets/pictures/trail.jpg" id="2_qnwh2"]
 [ext_resource type="Texture2D" uid="uid://bttbube2jp5un" path="res://assets/pictures/dcr21xk-80074eca-5ca4-4f19-9e39-5d3e9ff50c65.png" id="3_g1let"]
@@ -15,6 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://d2m5aaurxi5wu" path="res://audio/environment/electronics/zapsplat_horror_airy_wind_swell_ghostly_chilling_cold_107861.mp3" id="13_5r4eg"]
 [ext_resource type="Script" path="res://scenes/horror_wind.gd" id="13_tskd6"]
 [ext_resource type="AudioStream" uid="uid://bjx1gvgstbaf7" path="res://audio/environment/electronics/zapsplat_nature_wind_strong_constant_around_mountains_97997.mp3" id="15_iefrw"]
+[ext_resource type="PackedScene" uid="uid://cg2v3maimdlql" path="res://scenes/door.tscn" id="6_gmk5p"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_q2tqn"]
 a = Vector2(372.766, 459.446)
@@ -124,3 +125,6 @@ max_distance = 20000.0
 
 [connection signal="timeout" from="Lamp/LampLight/FlickerTimer" to="Lamp/LampLight" method="_on_flicker_timer_timeout"]
 [connection signal="timeout" from="HorrorWind/Timer" to="HorrorWind" method="_on_timer_timeout"]
+
+[node name="Door" parent="." instance=ExtResource("6_gmk5p")]
+position = Vector2(-6, -14)
