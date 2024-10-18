@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bv8r37oq4vldh"]
+
+[ext_resource type="PackedScene" uid="uid://c521td2cttlo" path="res://scenes/mountain_trail.tscn" id="1_1u3nf"]
+
+[node name="game" type="Node"]
+
+[node name="mountain trail" parent="." instance=ExtResource("1_1u3nf")]
