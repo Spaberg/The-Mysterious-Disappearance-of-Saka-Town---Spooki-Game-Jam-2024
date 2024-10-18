@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c521td2cttlo"]
+[gd_scene load_steps=5 format=3 uid="uid://c521td2cttlo"]
 
 [ext_resource type="Texture2D" uid="uid://v22s4lhee4oc" path="res://assets/pictures/123.jpg" id="1_jnl3n"]
+[ext_resource type="Texture2D" uid="uid://ybhe15yymk8e" path="res://assets/pictures/simut.png" id="1_s3se0"]
+[ext_resource type="AudioStream" uid="uid://ne1qtoo044vg" path="res://audio/environment/switch-noises-97673.mp3" id="3_dcku7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0l8fp"]
 size = Vector2(300.376, 235.353)
@@ -8,16 +10,32 @@ size = Vector2(300.376, 235.353)
 [node name="mountain trail" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(272, -10)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_s3se0")
+metadata/_edit_group_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
 
+[node name="AudioListener2D" type="AudioListener2D" parent="Sprite2D"]
+scale = Vector2(0.5, 0.5)
+current = true
+
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(49.5, -56)
+position = Vector2(-12, -314)
 scale = Vector2(1.33, 1.47863)
 texture = ExtResource("1_jnl3n")
+metadata/_edit_group_ = true
 
 [node name="Area2D" type="Area2D" parent="Sprite2D2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D2/Area2D"]
 position = Vector2(-0.187969, 0)
 shape = SubResource("RectangleShape2D_0l8fp")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_dcku7")
+autoplay = true
+max_distance = 360.0
+parameters/looping = true
