@@ -1,12 +1,11 @@
-
-[gd_scene load_steps=5 format=3 uid="uid://c521td2cttlo"]
-
+[gd_scene load_steps=9 format=3 uid="uid://c521td2cttlo"]
 
 [ext_resource type="Texture2D" uid="uid://vcc23hslq85f" path="res://assets/pictures/trail.jpg" id="2_qnwh2"]
 [ext_resource type="AudioStream" uid="uid://c02e7bnyu2f4v" path="res://audio/environment/fluorescent-lamp-flickering-17625.mp3" id="3_7tl1a"]
 [ext_resource type="Texture2D" uid="uid://bttbube2jp5un" path="res://assets/pictures/dcr21xk-80074eca-5ca4-4f19-9e39-5d3e9ff50c65.png" id="3_g1let"]
 [ext_resource type="Texture2D" uid="uid://crydpx3ox22ur" path="res://assets/textures/256x256 textures (9).png" id="4_x3lah"]
-[ext_resource type="Script" path="res://scenes/lamp_light.gd" id="5_c7dpq"]
+[ext_resource type="Script" path="res://scripts/lamp_light.gd" id="5_c7dpq"]
+[ext_resource type="PackedScene" uid="uid://cg2v3maimdlql" path="res://scenes/door.tscn" id="6_gmk5p"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_q2tqn"]
 a = Vector2(372.766, 459.446)
@@ -59,5 +58,8 @@ stream = ExtResource("3_7tl1a")
 autoplay = true
 max_distance = 360.0
 parameters/looping = true
+
+[node name="Door" parent="." instance=ExtResource("6_gmk5p")]
+position = Vector2(-6, -14)
 
 [connection signal="timeout" from="Sprite2D/LampLight/FlickerTimer" to="Sprite2D/LampLight" method="_on_flicker_timer_timeout"]
