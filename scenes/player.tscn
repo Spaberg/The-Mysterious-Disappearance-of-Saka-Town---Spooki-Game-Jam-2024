@@ -23,5 +23,6 @@ texture = ExtResource("2_yqmi0")
 position = Vector2(98, 88)
 shape = SubResource("CapsuleShape2D_64o7j")
 
-[node name="Sprite2D#AudioListener2D" type="AudioListener2D" parent="."]
+[node name="Sprite2D#AudioListener2D" type="AudioListener2D" parent="CharacterBody2D"]
+position = Vector2(0, -7.62939e-06)
 current = true
