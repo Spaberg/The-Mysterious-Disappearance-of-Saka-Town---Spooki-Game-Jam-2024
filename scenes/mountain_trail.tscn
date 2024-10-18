@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://c521td2cttlo"]
+[gd_scene load_steps=8 format=3 uid="uid://c521td2cttlo"]
 
-[ext_resource type="Texture2D" uid="uid://v22s4lhee4oc" path="res://assets/pictures/123.jpg" id="1_jnl3n"]
 [ext_resource type="Texture2D" uid="uid://vcc23hslq85f" path="res://assets/pictures/trail.jpg" id="2_qnwh2"]
-[ext_resource type="AudioStream" uid="uid://ne1qtoo044vg" path="res://audio/environment/switch-noises-97673.mp3" id="3_dcku7"]
+[ext_resource type="AudioStream" uid="uid://c02e7bnyu2f4v" path="res://audio/environment/fluorescent-lamp-flickering-17625.mp3" id="3_7tl1a"]
+[ext_resource type="Texture2D" uid="uid://bttbube2jp5un" path="res://assets/pictures/dcr21xk-80074eca-5ca4-4f19-9e39-5d3e9ff50c65.png" id="3_g1let"]
+[ext_resource type="Texture2D" uid="uid://crydpx3ox22ur" path="res://assets/textures/256x256 textures (9).png" id="4_x3lah"]
+[ext_resource type="Script" path="res://scenes/lamp_light.gd" id="5_c7dpq"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_q2tqn"]
 a = Vector2(372.766, 459.446)
@@ -12,14 +14,11 @@ b = Vector2(-319.514, 48.0815)
 a = Vector2(-308.863, 48.0815)
 b = Vector2(-873.337, 37.3967)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0l8fp"]
-size = Vector2(300.376, 235.353)
-
 [node name="mountain trail" type="Node2D"]
 position = Vector2(15, 42)
 
 [node name="Trail" type="Sprite2D" parent="."]
-position = Vector2(150, 48)
+position = Vector2(144, 51)
 scale = Vector2(0.187785, 0.187182)
 texture = ExtResource("2_qnwh2")
 
@@ -35,8 +34,28 @@ shape = SubResource("SegmentShape2D_8x652")
 position = Vector2(1235.45, 432.734)
 shape = SubResource("SegmentShape2D_8x652")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_dcku7")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(187, 35)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("3_g1let")
+
+[node name="FlickeringLightSound" type="AudioStreamPlayer2D" parent="Sprite2D"]
+position = Vector2(-3740, -700)
+scale = Vector2(20, 20)
+stream = ExtResource("3_7tl1a")
 autoplay = true
 max_distance = 360.0
 parameters/looping = true
+
+[node name="LampLight" type="PointLight2D" parent="Sprite2D"]
+position = Vector2(120, 160)
+texture = ExtResource("4_x3lah")
+texture_scale = 10.05
+script = ExtResource("5_c7dpq")
+
+[node name="FlickerTimer" type="Timer" parent="Sprite2D/LampLight"]
+process_callback = 0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Sprite2D/LampLight/FlickerTimer" to="Sprite2D/LampLight" method="_on_flicker_timer_timeout"]
