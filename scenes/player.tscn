@@ -1,12 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://dsqj6xg8dlyij"]
+[gd_scene load_steps=5 format=3 uid="uid://dsqj6xg8dlyij"]
 
 [ext_resource type="Script" path="res://player_controller.gd" id="1_ok1q6"]
 [ext_resource type="Texture2D" uid="uid://npw23yts2hat" path="res://assets/pictures/Jump (32x32).png" id="2_yqmi0"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_exdtg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_64o7j"]
+radius = 17.0
+height = 62.0
+
 [node name="Player" type="Node2D"]
 script = ExtResource("1_ok1q6")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(0, 7.62939e-06)
+scale = Vector2(1, 1)
+physics_material_override = SubResource("PhysicsMaterial_exdtg")
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
 position = Vector2(97, 87)
 scale = Vector2(1.65625, 1.875)
 texture = ExtResource("2_yqmi0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(98, 88)
+shape = SubResource("CapsuleShape2D_64o7j")
