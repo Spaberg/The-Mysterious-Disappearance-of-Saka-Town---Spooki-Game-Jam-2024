@@ -4,9 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://npw23yts2hat" path="res://assets/pictures/Jump (32x32).png" id="2_yqmi0"]
 
 [node name="Player" type="Node2D"]
+z_index = 1
 script = ExtResource("1_ok1q6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(97, 87)
+texture_filter = 1
+position = Vector2(120, 107)
 scale = Vector2(1.65625, 1.875)
 texture = ExtResource("2_yqmi0")
+
+[node name="AudioListener2D" type="AudioListener2D" parent="Sprite2D"]
+current = true
