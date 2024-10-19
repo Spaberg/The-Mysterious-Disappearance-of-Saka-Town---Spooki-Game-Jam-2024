@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://jdvfvp8j2txc"]
+[gd_scene load_steps=4 format=3 uid="uid://c3n77sjqh0ebj"]
 
 [ext_resource type="Texture2D" uid="uid://dq1no4nwlhapm" path="res://assets/levels/corridor.png" id="1_v34yy"]
 [ext_resource type="Texture2D" uid="uid://dv4gjbn2pknyk" path="res://assets/textures/256x256_textures_101.png" id="2_3nrvw"]
