@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://vcc23hslq85f" path="res://assets/pictures/trail.jpg" id="2_qnwh2"]
 [ext_resource type="Texture2D" uid="uid://bttbube2jp5un" path="res://assets/pictures/dcr21xk-80074eca-5ca4-4f19-9e39-5d3e9ff50c65.png" id="3_g1let"]
-[ext_resource type="Script" path="res://scenes/lamp_light.gd" id="4_b1qmy"]
+[ext_resource type="Script" path="res://scripts/flickering_light.gd" id="4_b1qmy"]
 [ext_resource type="Texture2D" uid="uid://crydpx3ox22ur" path="res://assets/textures/256x256 textures (9).png" id="4_x3lah"]
 [ext_resource type="AudioStream" uid="uid://dyrbhc55qjn8q" path="res://audio/environment/electronics/380660__arseniiv__fluorescent-lamp-flickering.wav" id="5_irxq3"]
 [ext_resource type="PackedScene" uid="uid://cg2v3maimdlql" path="res://scenes/door.tscn" id="6_gmk5p"]
