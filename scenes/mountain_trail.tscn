@@ -115,7 +115,7 @@ autostart = true
 
 [node name="Door" parent="." instance=ExtResource("6_gmk5p")]
 position = Vector2(-8, -19)
-destination = 2
+destination = 3
 
 [node name="Crows" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("17_qpdxh")
