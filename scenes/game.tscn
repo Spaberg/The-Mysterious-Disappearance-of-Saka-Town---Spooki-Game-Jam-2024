@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bv8r37oq4vldh"]
+[gd_scene load_steps=8 format=3 uid="uid://bv8r37oq4vldh"]
 
 [ext_resource type="PackedScene" uid="uid://c521td2cttlo" path="res://scenes/mountain_trail.tscn" id="1_1u3nf"]
 [ext_resource type="Script" path="res://scripts/game_controller.gd" id="1_8rq3n"]
 [ext_resource type="PackedScene" uid="uid://hbrn6nekpwwm" path="res://scenes/hospital.tscn" id="3_x8oae"]
-[ext_resource type="Texture2D" uid="uid://bm7rfqjsc5fpu" path="res://assets/overlay/mask.png" id="5_3b2nu"]
 [ext_resource type="Script" path="res://scenes/camera.gd" id="5_cw1dd"]
 [ext_resource type="PackedScene" uid="uid://bt0dypks7hq6j" path="res://scenes/demo_mountain_trail.tscn" id="6_bk4nu"]
 [ext_resource type="PackedScene" uid="uid://c0am8jbn7wvkl" path="res://scenes/hospital_outside.tscn" id="6_qonim"]
@@ -40,11 +39,6 @@ position = Vector2(-1013, -574)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(155, 93)
 script = ExtResource("5_cw1dd")
-
-[node name="MASK" type="Sprite2D" parent="Camera2D"]
-position = Vector2(-6.00001, -8.99999)
-scale = Vector2(1.79609, 1.9625)
-texture = ExtResource("5_3b2nu")
 
 [node name="PlayerPosition" type="Marker2D" parent="."]
 position = Vector2(-1566, 178)
