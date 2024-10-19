@@ -61,5 +61,6 @@ parameters/looping = true
 
 [node name="Door" parent="." instance=ExtResource("6_gmk5p")]
 position = Vector2(-6, -14)
+destination = 2
 
 [connection signal="timeout" from="Sprite2D/LampLight/FlickerTimer" to="Sprite2D/LampLight" method="_on_flicker_timer_timeout"]

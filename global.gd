@@ -3,7 +3,7 @@ extends Node2D
 enum DESTINATION {MountainTrailStart = 0, MountainTrailEnd, HospitalEntrance}
 
 var destination_coordinates = {
-	DESTINATION.HospitalEntrance: Vector2(0,0),
+	DESTINATION.HospitalEntrance: Vector2(686,139),
 }
 
 signal teleported

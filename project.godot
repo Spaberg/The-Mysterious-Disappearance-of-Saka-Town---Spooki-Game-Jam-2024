@@ -18,12 +18,13 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://global.tscn"
+Player="*res://scenes/player.tscn"
 
 [display]
 
 window/size/viewport_width=320
 window/size/viewport_height=180
-window/size/mode=4
+window/size/mode=3
 window/size/resizable=false
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
@@ -42,6 +43,6 @@ window/stretch/scale_mode="integer"
 }
 Interact={
 "deadzone": 0.5,
-"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(210, 27),"global_position":Vector2(224, 97),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":87,"physical_keycode":0,"key_label":0,"unicode":119,"location":0,"echo":false,"script":null)
 ]
 }
