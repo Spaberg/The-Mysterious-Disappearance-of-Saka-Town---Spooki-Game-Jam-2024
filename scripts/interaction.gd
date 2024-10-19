@@ -9,10 +9,12 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	if (Input.is_action_just_released("Interact") and is_collision):
+	if (Input.is_action_just_released("Interact") and is_collision and not Global.pausing):
 		is_collision = false
 		Global.display_poster(poster_instance)
-		
+	elif (Input.is_action_just_released("Interact") and Global.pausing):
+		Global.hide_poster()
+		poster_instance = poster_scene.instantiate()
 	pass
 
 func _on_area_entered(area):

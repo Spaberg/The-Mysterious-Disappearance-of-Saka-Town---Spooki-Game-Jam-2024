@@ -15,10 +15,15 @@ signal radio_triggered
 
 signal teleported
 signal add_poster
+signal remove_poster
 
 func display_poster(scene_instance):
-	pausing=true
-	#add_poster.emit(scene_instance)
+	pausing = true
+	add_poster.emit(scene_instance)
+
+func hide_poster():
+	pausing = false
+	remove_poster.emit()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
