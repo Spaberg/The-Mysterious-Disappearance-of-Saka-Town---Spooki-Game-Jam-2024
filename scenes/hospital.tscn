@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://hbrn6nekpwwm"]
+
+[ext_resource type="Texture2D" uid="uid://cofei2sb78v2v" path="res://assets/pictures/level_crossing.png" id="1_ldlkf"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_38pkl"]
+a = Vector2(-161, 70)
+b = Vector2(151, 71)
+
+[node name="Hospital" type="Node2D"]
+
+[node name="hospital" type="Sprite2D" parent="."]
+position = Vector2(165, 89)
+texture = ExtResource("1_ldlkf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="hospital"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hospital/StaticBody2D"]
+position = Vector2(4, 8)
+shape = SubResource("SegmentShape2D_38pkl")

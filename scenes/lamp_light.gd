@@ -15,4 +15,3 @@ func _on_flicker_timer_timeout() -> void:
 	enabled = !enabled
 	$FlickerTimer.wait_time = randf()*0.5
 	$FlickerTimer.start()
-	
