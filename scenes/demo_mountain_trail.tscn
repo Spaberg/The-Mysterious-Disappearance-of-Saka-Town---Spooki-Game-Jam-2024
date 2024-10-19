@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://bt0dypks7hq6j"]
+
+[ext_resource type="Texture2D" uid="uid://cevgkc45x7x86" path="res://assets/levels/forest_foreground.png" id="1_fqg5l"]
+[ext_resource type="Texture2D" uid="uid://dykqiai342mw6" path="res://assets/levels/forest_background.png" id="1_vvnpt"]
+[ext_resource type="PackedScene" uid="uid://cg2v3maimdlql" path="res://scenes/door.tscn" id="3_o86my"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ihdx5"]
+a = Vector2(-530, -97)
+b = Vector2(-224, -49)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_8u4rg"]
+a = Vector2(-537, -251)
+b = Vector2(-531, -99)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_yjacj"]
+a = Vector2(25, -43)
+b = Vector2(-231, -49)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_njp1s"]
+a = Vector2(264, 69)
+b = Vector2(29, -41)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_bhp2r"]
+a = Vector2(389, 66)
+b = Vector2(261, 67)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_nugxe"]
+a = Vector2(394, 70)
+b = Vector2(394, -228)
+
+[node name="Demo mountain trail" type="Node2D"]
+
+[node name="mask" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(672, 255)
+texture = ExtResource("1_fqg5l")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(672, 255)
+texture = ExtResource("1_vvnpt")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="background"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="background/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ihdx5")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="background/StaticBody2D"]
+shape = SubResource("SegmentShape2D_8u4rg")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="background/StaticBody2D"]
+shape = SubResource("SegmentShape2D_yjacj")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="background/StaticBody2D"]
+shape = SubResource("SegmentShape2D_njp1s")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="background/StaticBody2D"]
+shape = SubResource("SegmentShape2D_bhp2r")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="background/StaticBody2D"]
+position = Vector2(-38, -2)
+shape = SubResource("SegmentShape2D_nugxe")
+
+[node name="Door" parent="." instance=ExtResource("3_o86my")]
+position = Vector2(682, 162)

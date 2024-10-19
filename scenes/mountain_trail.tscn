@@ -44,7 +44,7 @@ shape = SubResource("SegmentShape2D_q2tqn")
 shape = SubResource("SegmentShape2D_8x652")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Trail/StaticBody2D"]
-position = Vector2(1235.45, 432.734)
+position = Vector2(1246.11, 422.049)
 shape = SubResource("SegmentShape2D_8x652")
 
 [node name="Lamp" type="Sprite2D" parent="."]
@@ -126,18 +126,17 @@ autoplay = true
 max_distance = 20000.0
 
 [node name="Door" parent="." instance=ExtResource("6_gmk5p")]
-position = Vector2(-6, -14)
+position = Vector2(-8, -19)
 destination = 2
 
 [node name="Crows" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("17_qpdxh")
 volume_db = -10.0
-max_distance = 360.0
+autoplay = true
 script = ExtResource("17_okr70")
 
 [node name="Timer" type="Timer" parent="Crows"]
 one_shot = true
-autostart = true
 
 [connection signal="timeout" from="Lamp/LampLight/FlickerTimer" to="Lamp/LampLight" method="_on_flicker_timer_timeout"]
 [connection signal="timeout" from="HorrorWind/Timer" to="HorrorWind" method="_on_timer_timeout"]
