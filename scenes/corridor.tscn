@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://jdvfvp8j2txc"]
+
+[ext_resource type="Texture2D" uid="uid://dq1no4nwlhapm" path="res://assets/levels/corridor.png" id="1_v34yy"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_hfedn"]
+a = Vector2(116, 77)
+b = Vector2(-131, 77)
+
+[node name="Corridor" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(112, 89)
+texture = ExtResource("1_v34yy")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(6, 3)
+shape = SubResource("SegmentShape2D_hfedn")
