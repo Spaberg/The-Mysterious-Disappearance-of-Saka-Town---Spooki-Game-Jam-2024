@@ -1,6 +1,5 @@
 extends Node2D
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Global.radio_triggered.connect(_on_radio_triggered)
@@ -12,5 +11,5 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_radio_triggered():
-	
+	$Sprite2D/brightlight.color = Color(1,1,1,1)
 	pass
