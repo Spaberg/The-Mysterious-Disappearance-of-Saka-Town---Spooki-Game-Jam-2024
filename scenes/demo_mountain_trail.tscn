@@ -3,7 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://cevgkc45x7x86" path="res://assets/levels/forest_foreground.png" id="1_fqg5l"]
 [ext_resource type="Texture2D" uid="uid://dykqiai342mw6" path="res://assets/levels/forest_background.png" id="1_vvnpt"]
 [ext_resource type="PackedScene" uid="uid://cg2v3maimdlql" path="res://scenes/door.tscn" id="3_o86my"]
+<<<<<<< HEAD
 [ext_resource type="AudioStream" uid="uid://bjx1gvgstbaf7" path="res://audio/environment/electronics/zapsplat_nature_wind_strong_constant_around_mountains_97997.mp3" id="4_4fx5q"]
+=======
+>>>>>>> 997409ed5ca9535ce324bbf2698b2ffa763e15ec
 [ext_resource type="PackedScene" uid="uid://ck7pd6crsnpfc" path="res://scenes/interaction_point.tscn" id="4_vg7hw"]
 [ext_resource type="AudioStream" uid="uid://cabego4pciah" path="res://audio/environment/life/higurashi-cry1.mp3" id="5_6pwka"]
 [ext_resource type="Texture2D" uid="uid://bj1sbe7io76y4" path="res://assets/pictures/vintage-radio.png" id="5_g184v"]

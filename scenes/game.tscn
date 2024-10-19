@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bv8r37oq4vldh"]
+[gd_scene load_steps=9 format=3 uid="uid://bv8r37oq4vldh"]
 
 [ext_resource type="PackedScene" uid="uid://c521td2cttlo" path="res://scenes/mountain_trail.tscn" id="1_1u3nf"]
 [ext_resource type="Script" path="res://scripts/game_controller.gd" id="1_8rq3n"]
@@ -6,7 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://bm7rfqjsc5fpu" path="res://assets/overlay/mask.png" id="5_3b2nu"]
 [ext_resource type="Script" path="res://scenes/camera.gd" id="5_cw1dd"]
 [ext_resource type="PackedScene" uid="uid://bt0dypks7hq6j" path="res://scenes/demo_mountain_trail.tscn" id="6_bk4nu"]
-[ext_resource type="PackedScene" uid="uid://c3n77sjqh0ebj" path="res://scenes/corridor.tscn" id="7_c2f50"]
+[ext_resource type="PackedScene" uid="uid://c0am8jbn7wvkl" path="res://scenes/hospital_outside.tscn" id="6_onij4"]
+[ext_resource type="PackedScene" uid="uid://jdvfvp8j2txc" path="res://scenes/corridor.tscn" id="7_c2f50"]
 
 [node name="game" type="Node"]
 script = ExtResource("1_8rq3n")
@@ -22,16 +23,19 @@ position = Vector2(-1743, 72)
 [node name="Corridor" parent="." instance=ExtResource("7_c2f50")]
 position = Vector2(-1095, -752)
 
+[node name="hospital_outside" parent="." instance=ExtResource("6_onij4")]
+position = Vector2(267, -610)
+
 [node name="Teleport Positions" type="Node" parent="."]
 
 [node name="HospitalEntrance" type="Marker2D" parent="Teleport Positions"]
-position = Vector2(686, 139)
+position = Vector2(367, -501)
 
 [node name="MountainTrailStart" type="Marker2D" parent="Teleport Positions"]
 position = Vector2(24, 66)
 
 [node name="CorridorEntrance" type="Marker2D" parent="Teleport Positions"]
-position = Vector2(-1072, -637)
+position = Vector2(-1075, -634)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 z_index = 4
