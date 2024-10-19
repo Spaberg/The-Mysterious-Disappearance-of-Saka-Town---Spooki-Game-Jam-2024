@@ -10,16 +10,16 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	position.x += velocity*delta
+	global_position.x += velocity*delta
 
 func _on_timer_timeout() -> void:
-	position = Vector2(Player.position.x + (randf() - 0.5)*shift_range, Player.position.y)
+	global_position = Vector2(Player.position.x + (randf() - 0.5)*shift_range, Player.position.y)
 	if(randf() > 0.5):
 		dir = 1
 	else:
 		dir = -1
 	velocity = randf()*50*dir
 	play()
-	$Timer.wait_time = 8 #+ randf() * 15
+	$Timer.wait_time = 8 + randf() * 10
 	$Timer.start()
 	

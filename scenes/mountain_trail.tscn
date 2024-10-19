@@ -1,11 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://c521td2cttlo"]
+[gd_scene load_steps=16 format=3 uid="uid://c521td2cttlo"]
 
 [ext_resource type="Texture2D" uid="uid://vcc23hslq85f" path="res://assets/pictures/trail.jpg" id="2_qnwh2"]
 [ext_resource type="Texture2D" uid="uid://bttbube2jp5un" path="res://assets/pictures/dcr21xk-80074eca-5ca4-4f19-9e39-5d3e9ff50c65.png" id="3_g1let"]
 [ext_resource type="Script" path="res://scripts/flickering_light.gd" id="4_b1qmy"]
 [ext_resource type="Texture2D" uid="uid://crydpx3ox22ur" path="res://assets/textures/256x256 textures (9).png" id="4_x3lah"]
 [ext_resource type="AudioStream" uid="uid://dyrbhc55qjn8q" path="res://audio/environment/electronics/380660__arseniiv__fluorescent-lamp-flickering.wav" id="5_irxq3"]
-[ext_resource type="PackedScene" path="res://scenes/door.tscn" id="6_gmk5p"]
+[ext_resource type="PackedScene" uid="uid://cg2v3maimdlql" path="res://scenes/door.tscn" id="6_gmk5p"]
 [ext_resource type="Texture2D" uid="uid://dsakqp0yqxlhr" path="res://assets/pictures/air-conditioner-12.png" id="6_jawcq"]
 [ext_resource type="AudioStream" uid="uid://bdk2nlm4xdlwt" path="res://audio/environment/electronics/379753__microsoftsam__ac_highfreq.wav" id="7_x8vk4"]
 [ext_resource type="AudioStream" uid="uid://cd888gd7aqv5x" path="res://audio/environment/electronics/572553__zach_ramirez__thermostat-air-conditioner-part-2-wav.wav" id="8_qf81h"]
@@ -13,10 +13,6 @@
 [ext_resource type="AudioStream" uid="uid://cr3th5umfo3ao" path="res://audio/environment/electronics/626963__klankbeeld__vlissingen-coast-area-marine-radio-nl-220221.ogg" id="11_532pj"]
 [ext_resource type="Script" path="res://scenes/radio_player.gd" id="11_qibay"]
 [ext_resource type="AudioStream" uid="uid://2hphcsfw7xeu" path="res://audio/environment/electronics/257879__zmobie__short-wave-radio-noise-2.wav" id="12_3cim4"]
-[ext_resource type="AudioStream" uid="uid://d2m5aaurxi5wu" path="res://audio/environment/electronics/zapsplat_horror_airy_wind_swell_ghostly_chilling_cold_107861.mp3" id="13_5r4eg"]
-[ext_resource type="Script" path="res://scenes/horror_wind.gd" id="13_tskd6"]
-[ext_resource type="Script" path="res://scenes/crows.gd" id="17_okr70"]
-[ext_resource type="AudioStream" uid="uid://x1c06wbuq0v8" path="res://audio/environment/life/371314__freemaster2__creepy-chorus-of-crows.wav" id="17_qpdxh"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_q2tqn"]
 a = Vector2(372.766, 459.446)
@@ -101,33 +97,10 @@ volume_db = -15.0
 autoplay = true
 max_distance = 360.0
 
-[node name="HorrorWind" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("13_5r4eg")
-volume_db = -10.0
-max_distance = 20000.0
-panning_strength = 0.0
-script = ExtResource("13_tskd6")
-
-[node name="Timer" type="Timer" parent="HorrorWind"]
-wait_time = 5.0
-one_shot = true
-autostart = true
-
 [node name="Door" parent="." instance=ExtResource("6_gmk5p")]
 position = Vector2(-8, -19)
 destination = 3
 
-[node name="Crows" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("17_qpdxh")
-volume_db = -10.0
-autoplay = true
-script = ExtResource("17_okr70")
-
-[node name="Timer" type="Timer" parent="Crows"]
-one_shot = true
-
 [node name="Node2D" type="Node2D" parent="."]
 
 [connection signal="timeout" from="Lamp/LampLight/FlickerTimer" to="Lamp/LampLight" method="_on_flicker_timer_timeout"]
-[connection signal="timeout" from="HorrorWind/Timer" to="HorrorWind" method="_on_timer_timeout"]
-[connection signal="timeout" from="Crows/Timer" to="Crows" method="_on_timer_timeout"]
