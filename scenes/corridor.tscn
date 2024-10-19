@@ -3,17 +3,17 @@
 [ext_resource type="Texture2D" uid="uid://dq1no4nwlhapm" path="res://assets/levels/corridor.png" id="1_v34yy"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_hfedn"]
-a = Vector2(116, 77)
-b = Vector2(-131, 77)
+a = Vector2(195, 78)
+b = Vector2(-186, 78)
 
 [node name="Corridor" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(112, 89)
+position = Vector2(161, 89)
 texture = ExtResource("1_v34yy")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(6, 3)
+position = Vector2(7, -16)
 shape = SubResource("SegmentShape2D_hfedn")
