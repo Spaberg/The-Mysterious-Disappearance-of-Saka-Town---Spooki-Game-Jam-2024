@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cofei2sb78v2v"
-path="res://.godot/imported/level_crossing.png-ab82a3abb89d5e1b68e6b541a4f7e4ef.ctex"
+uid="uid://bm7rfqjsc5fpu"
+path="res://.godot/imported/mask.png-5eaebd69c72ccec739467ce02e0fef0e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/level_crossing.png"
-dest_files=["res://.godot/imported/level_crossing.png-ab82a3abb89d5e1b68e6b541a4f7e4ef.ctex"]
+source_file="res://assets/overlay/mask.png"
+dest_files=["res://.godot/imported/mask.png-5eaebd69c72ccec739467ce02e0fef0e.ctex"]
 
 [params]
 
