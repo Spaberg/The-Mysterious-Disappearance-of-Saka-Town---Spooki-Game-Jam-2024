@@ -4,6 +4,7 @@ enum DESTINATION {MountainTrailStart = 0, MountainTrailEnd, HospitalEntrance}
 
 var destination_coordinates = {
 	DESTINATION.HospitalEntrance: Vector2(686,139),
+	DESTINATION.MountainTrailStart: Vector2(24,66),
 }
 
 signal teleported

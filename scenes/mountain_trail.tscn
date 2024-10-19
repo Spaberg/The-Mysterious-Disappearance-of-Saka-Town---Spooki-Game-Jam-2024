@@ -126,7 +126,7 @@ autoplay = true
 max_distance = 20000.0
 
 [node name="Door" parent="." instance=ExtResource("6_gmk5p")]
-position = Vector2(-6, -14)
+position = Vector2(-7, -16)
 destination = 2
 
 [node name="Crows" type="AudioStreamPlayer2D" parent="."]
