@@ -1,0 +1,22 @@
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://bvs2gk1sf430o"]
+
+[sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_t03vr"]
+resource_name = "LowPassFilter"
+cutoff_hz = 1000.0
+
+[sub_resource type="AudioEffectPitchShift" id="AudioEffectPitchShift_ln804"]
+resource_name = "PitchShift"
+pitch_scale = 0.8
+
+[resource]
+bus/0/volume_db = 0.000600815
+bus/1/name = &"Outside"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = 0.0
+bus/1/send = &"Master"
+bus/1/effect/0/effect = SubResource("AudioEffectLowPassFilter_t03vr")
+bus/1/effect/0/enabled = true
+bus/1/effect/1/effect = SubResource("AudioEffectPitchShift_ln804")
+bus/1/effect/1/enabled = true
