@@ -7,11 +7,10 @@ var velocity
 var movingposition : Vector2
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	Global.add_poster.connect(_on_add_poster)
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
 	movingposition = Player.position
 	movingposition.x += lookOffset
 	movingposition.y -= 30
@@ -22,3 +21,6 @@ func _process(delta: float) -> void:
 	if(velocity<0):
 		lookOffset = lerp(lookOffset,-lookAheadDistance,lookAheadSpeed*delta)
 	pass
+
+func _on_add_poster(scene_instance):
+	add_child(scene_instance)

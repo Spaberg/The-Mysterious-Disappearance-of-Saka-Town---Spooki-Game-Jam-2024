@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://cq8nwgirrir76"]
+[gd_scene load_steps=2 format=3 uid="uid://bso3i1wwcdaal"]
 
 [ext_resource type="Script" path="res://scripts/global.gd" id="1_y2nqs"]
 
 [node name="Global" type="Node2D"]
+z_index = 5
 script = ExtResource("1_y2nqs")
+
+[node name="RadioTrigger" type="Timer" parent="."]
+wait_time = 6.0
+one_shot = true
+
+[connection signal="timeout" from="RadioTrigger" to="." method="_on_radio_timeout"]

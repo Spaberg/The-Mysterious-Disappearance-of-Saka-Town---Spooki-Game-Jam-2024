@@ -16,7 +16,8 @@ func _process(delta: float) -> void:
 	velocity.y += gravity * delta
 	get_parent().position += position
 	position = Vector2(0,0)
-	move_and_slide()
+	if not Global.pausing:
+		move_and_slide()
 	pass
 
 func _on_teleported(destination):
