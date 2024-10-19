@@ -1,4 +1,4 @@
-extends AudioStreamPlayer2D
+extends PointLight2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,7 +11,7 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_timer_timeout() -> void:
-	play()
-	$Timer.wait_time = 18 + randf()*20
-	$Timer.start()
+func _on_flicker_timer_timeout() -> void:
+	enabled = !enabled
+	$FlickerTimer.wait_time = randf()*0.5
+	$FlickerTimer.start()

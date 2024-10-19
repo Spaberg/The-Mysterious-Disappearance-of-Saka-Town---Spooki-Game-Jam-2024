@@ -9,9 +9,13 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	#position.x += 10
+	#if(position.x < player.position.x + 360):
+		#position.x = player.position.x - 360
 
 
 func _on_timer_timeout() -> void:
 	play()
-	$Timer.wait_time = 18 + randf()*20
+	$Timer.wait_time = 8 + randf() * 15
 	$Timer.start()
+	
