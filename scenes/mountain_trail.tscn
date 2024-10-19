@@ -44,7 +44,7 @@ shape = SubResource("SegmentShape2D_q2tqn")
 shape = SubResource("SegmentShape2D_8x652")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Trail/StaticBody2D"]
-position = Vector2(1235.45, 432.734)
+position = Vector2(1246.11, 422.049)
 shape = SubResource("SegmentShape2D_8x652")
 
 [node name="Lamp" type="Sprite2D" parent="."]
@@ -126,7 +126,7 @@ autoplay = true
 max_distance = 20000.0
 
 [node name="Door" parent="." instance=ExtResource("6_gmk5p")]
-position = Vector2(-7, -16)
+position = Vector2(-8, -19)
 destination = 2
 
 [node name="Crows" type="AudioStreamPlayer2D" parent="."]

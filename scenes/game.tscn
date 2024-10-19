@@ -43,4 +43,4 @@ position = Vector2(-1566, 178)
 position = Vector2(-1743, 72)
 
 [node name="Corridor" parent="." instance=ExtResource("7_c2f50")]
-position = Vector2(-628, -259)
+position = Vector2(-1095, -752)
