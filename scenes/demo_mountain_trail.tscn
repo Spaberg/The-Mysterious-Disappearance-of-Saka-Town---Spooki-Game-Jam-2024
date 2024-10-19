@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c4522rlqknws"]
+[gd_scene load_steps=11 format=3 uid="uid://bt0dypks7hq6j"]
 
 [ext_resource type="Texture2D" uid="uid://cevgkc45x7x86" path="res://assets/levels/forest_foreground.png" id="1_fqg5l"]
 [ext_resource type="Texture2D" uid="uid://dykqiai342mw6" path="res://assets/levels/forest_background.png" id="1_vvnpt"]
@@ -80,3 +80,5 @@ autoplay = true
 max_distance = 20000.0
 panning_strength = 0.5
 bus = &"Outside"
+[node name="Interaction point" parent="." instance=ExtResource("4_vg7hw")]
+position = Vector2(129, 68)
