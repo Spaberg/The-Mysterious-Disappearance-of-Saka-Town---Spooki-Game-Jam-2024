@@ -1,8 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://bt0dypks7hq6j"]
+[gd_scene load_steps=28 format=3 uid="uid://bt0dypks7hq6j"]
 
 [ext_resource type="Texture2D" uid="uid://cevgkc45x7x86" path="res://assets/levels/forest_foreground.png" id="1_fqg5l"]
 [ext_resource type="Texture2D" uid="uid://dykqiai342mw6" path="res://assets/levels/forest_background.png" id="1_vvnpt"]
-[ext_resource type="PackedScene" uid="uid://cg2v3maimdlql" path="res://scenes/door.tscn" id="3_o86my"]
+[ext_resource type="PackedScene" path="res://scenes/door.tscn" id="3_o86my"]
 [ext_resource type="AudioStream" uid="uid://bjx1gvgstbaf7" path="res://audio/environment/electronics/zapsplat_nature_wind_strong_constant_around_mountains_97997.mp3" id="4_4fx5q"]
 [ext_resource type="PackedScene" uid="uid://ck7pd6crsnpfc" path="res://scenes/interaction_point.tscn" id="4_vg7hw"]
 [ext_resource type="AudioStream" uid="uid://cabego4pciah" path="res://audio/environment/life/higurashi-cry1.mp3" id="5_6pwka"]
@@ -13,37 +13,79 @@
 [ext_resource type="AudioStream" uid="uid://2hphcsfw7xeu" path="res://audio/environment/electronics/257879__zmobie__short-wave-radio-noise-2.wav" id="8_x6lfx"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ihdx5"]
-a = Vector2(-530, -97)
-b = Vector2(-224, -49)
+a = Vector2(-718, -5)
+b = Vector2(-648, -2)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_8u4rg"]
-a = Vector2(-537, -251)
-b = Vector2(-531, -99)
+a = Vector2(-718, -5)
+b = Vector2(-703, -101)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_yjacj"]
-a = Vector2(25, -43)
-b = Vector2(-231, -49)
+a = Vector2(-575, 2)
+b = Vector2(-648, -2)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_njp1s"]
-a = Vector2(264, 69)
-b = Vector2(29, -41)
+a = Vector2(-461, 16)
+b = Vector2(-575, 1)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_bhp2r"]
-a = Vector2(389, 66)
-b = Vector2(261, 67)
+a = Vector2(-462, 16)
+b = Vector2(-426, 16)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_nugxe"]
-a = Vector2(394, 70)
-b = Vector2(394, -228)
+a = Vector2(-310, 33)
+b = Vector2(-389, 18)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_jt1ii"]
+a = Vector2(-349, 31)
+b = Vector2(-310, 47)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_bv12u"]
+a = Vector2(-315, 45)
+b = Vector2(-211, 46)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ho1cx"]
+a = Vector2(-211, 47)
+b = Vector2(-162, 53)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2pbu8"]
+a = Vector2(-163, 53)
+b = Vector2(37, 82)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_4sv1f"]
+a = Vector2(42, 66)
+b = Vector2(145, 77)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_e86np"]
+a = Vector2(140, 93)
+b = Vector2(271, 88)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_wqjld"]
+a = Vector2(271, 88)
+b = Vector2(302, 91)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_gw336"]
+a = Vector2(472, 172)
+b = Vector2(255, 67)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_73mec"]
+a = Vector2(518, 196)
+b = Vector2(624, 197)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_do8jc"]
+a = Vector2(634, 82)
+b = Vector2(624, 197)
 
 [node name="Demo mountain trail" type="Node2D"]
 
 [node name="mask" type="Sprite2D" parent="."]
 z_index = 2
+texture_filter = 1
 position = Vector2(672, 255)
 texture = ExtResource("1_fqg5l")
 
 [node name="background" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(672, 255)
 texture = ExtResource("1_vvnpt")
 
@@ -68,8 +110,41 @@ shape = SubResource("SegmentShape2D_bhp2r")
 position = Vector2(-38, -2)
 shape = SubResource("SegmentShape2D_nugxe")
 
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="background/StaticBody2D"]
+shape = SubResource("SegmentShape2D_jt1ii")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="background/StaticBody2D"]
+shape = SubResource("SegmentShape2D_bv12u")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="background/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ho1cx")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="background/StaticBody2D"]
+shape = SubResource("SegmentShape2D_2pbu8")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="background/StaticBody2D"]
+position = Vector2(-5, 16)
+shape = SubResource("SegmentShape2D_4sv1f")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="background/StaticBody2D"]
+shape = SubResource("SegmentShape2D_e86np")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="background/StaticBody2D"]
+shape = SubResource("SegmentShape2D_wqjld")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="background/StaticBody2D"]
+position = Vector2(46, 24)
+shape = SubResource("SegmentShape2D_gw336")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="background/StaticBody2D"]
+shape = SubResource("SegmentShape2D_73mec")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="background/StaticBody2D"]
+shape = SubResource("SegmentShape2D_do8jc")
+
 [node name="Door" parent="." instance=ExtResource("3_o86my")]
-position = Vector2(682, 162)
+visible = false
+position = Vector2(950, 293)
 
 [node name="Poster (not working)" parent="." instance=ExtResource("4_vg7hw")]
 position = Vector2(299, 159)
