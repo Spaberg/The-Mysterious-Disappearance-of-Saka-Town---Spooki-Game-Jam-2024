@@ -4,3 +4,9 @@
 
 [node name="Global" type="Node2D"]
 script = ExtResource("1_y2nqs")
+
+[node name="RadioTrigger" type="Timer" parent="."]
+wait_time = 6.0
+one_shot = true
+
+[connection signal="timeout" from="RadioTrigger" to="." method="_on_radio_timeout"]
