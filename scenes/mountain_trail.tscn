@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://scenes/lamp_light.gd" id="4_b1qmy"]
 [ext_resource type="Texture2D" uid="uid://crydpx3ox22ur" path="res://assets/textures/256x256 textures (9).png" id="4_x3lah"]
 [ext_resource type="AudioStream" uid="uid://dyrbhc55qjn8q" path="res://audio/environment/electronics/380660__arseniiv__fluorescent-lamp-flickering.wav" id="5_irxq3"]
-[ext_resource type="PackedScene" path="res://scenes/door.tscn" id="6_gmk5p"]
+[ext_resource type="PackedScene" uid="uid://cg2v3maimdlql" path="res://scenes/door.tscn" id="6_gmk5p"]
 [ext_resource type="Texture2D" uid="uid://dsakqp0yqxlhr" path="res://assets/pictures/air-conditioner-12.png" id="6_jawcq"]
 [ext_resource type="AudioStream" uid="uid://bdk2nlm4xdlwt" path="res://audio/environment/electronics/379753__microsoftsam__ac_highfreq.wav" id="7_x8vk4"]
 [ext_resource type="AudioStream" uid="uid://cd888gd7aqv5x" path="res://audio/environment/electronics/572553__zach_ramirez__thermostat-air-conditioner-part-2-wav.wav" id="8_qf81h"]
@@ -127,17 +127,17 @@ max_distance = 20000.0
 
 [node name="Door" parent="." instance=ExtResource("6_gmk5p")]
 position = Vector2(-6, -14)
-
 destination = 2
 
 [node name="Crows" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("17_qpdxh")
 volume_db = -10.0
-autoplay = true
+max_distance = 360.0
 script = ExtResource("17_okr70")
 
 [node name="Timer" type="Timer" parent="Crows"]
 one_shot = true
+autostart = true
 
 [connection signal="timeout" from="Lamp/LampLight/FlickerTimer" to="Lamp/LampLight" method="_on_flicker_timer_timeout"]
 [connection signal="timeout" from="HorrorWind/Timer" to="HorrorWind" method="_on_timer_timeout"]

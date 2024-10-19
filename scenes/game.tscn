@@ -2,10 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://c521td2cttlo" path="res://scenes/mountain_trail.tscn" id="1_1u3nf"]
 [ext_resource type="Script" path="res://scripts/game_controller.gd" id="1_8rq3n"]
-
-[ext_resource type="PackedScene" uid="uid://hbrn6nekpwwm" path="res://scenes/hospital.tscn" id="3_x8oae"]
+[ext_resource type="PackedScene" path="res://scenes/hospital.tscn" id="3_x8oae"]
 [ext_resource type="Script" path="res://scenes/camera.gd" id="5_cw1dd"]
-[ext_resource type="PackedScene" uid="uid://dsqj6xg8dlyij" path="res://scenes/player.tscn" id="2_u68bs"]
 
 [node name="game" type="Node"]
 script = ExtResource("1_8rq3n")
