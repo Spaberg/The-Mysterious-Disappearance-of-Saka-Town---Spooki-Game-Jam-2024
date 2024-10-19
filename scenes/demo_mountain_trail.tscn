@@ -84,9 +84,6 @@ script = ExtResource("6_lexs2")
 scale = Vector2(50, 50)
 poster_scene = ExtResource("8_1dy8s")
 
-[node name="Area2D" parent="Radio/Interaction Point/Sprite2D2" index="0"]
-collision_layer = 2
-
 [node name="RadioVoices" type="AudioStreamPlayer2D" parent="Radio"]
 stream = ExtResource("7_w7sf8")
 autoplay = true
@@ -111,5 +108,3 @@ volume_db = -27.0
 autoplay = true
 max_distance = 20000.0
 panning_strength = 0.5
-
-[editable path="Radio/Interaction Point"]

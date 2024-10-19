@@ -1,12 +1,12 @@
 extends Node2D
 
 var radio_pct : float = 0
-var radio_triggereded : bool = false
+var radio_has_been_triggered : bool = false
 
 enum DESTINATION {MountainTrailStart = 0, MountainTrailEnd, HospitalEntrance, CorridorEntrance}
 var pausing :bool=false
 var destination_coordinates = {
-	DESTINATION.HospitalEntrance: Vector2(367,-501),
+	DESTINATION.HospitalEntrance: Vector2(205,658),
 	DESTINATION.MountainTrailStart: Vector2(24,66),
 	DESTINATION.CorridorEntrance: Vector2(-1072,-637),
 }
@@ -37,7 +37,7 @@ func _process(delta: float) -> void:
 # don't do this IRL
 func set_radio_pct(value):
 	radio_pct = value
-	if not radio_triggereded:
+	if not radio_has_been_triggered:
 		print(radio_pct)
 	if radio_pct > 0.8:
 		if $RadioTrigger.is_stopped():
@@ -46,9 +46,10 @@ func set_radio_pct(value):
 		$RadioTrigger.stop()
 		
 func _on_radio_timeout():
-	radio_triggered.emit()
+	if not radio_has_been_triggered:
+		radio_triggered.emit()
 	
 func _on_radio_triggered():
 	print("yeahhh!")
-	radio_triggereded = true
+	radio_has_been_triggered = true
 	pass
