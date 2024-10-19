@@ -17,14 +17,14 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Player="*res://scenes/player.tscn"
 Global="*res://global.tscn"
+Player="*res://scenes/player.tscn"
 
 [display]
 
 window/size/viewport_width=320
 window/size/viewport_height=180
-window/size/mode=3
+window/size/mode=4
 window/size/resizable=false
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
@@ -51,3 +51,7 @@ Interact={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
 ]
 }
+
+[rendering]
+
+2d/snap/snap_2d_transforms_to_pixel=true

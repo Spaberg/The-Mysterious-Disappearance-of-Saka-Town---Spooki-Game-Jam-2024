@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dsqj6xg8dlyij"]
+[gd_scene load_steps=25 format=3 uid="uid://dsqj6xg8dlyij"]
 
 [ext_resource type="Script" path="res://scripts/player_movement.gd" id="1_ok1q6"]
 [ext_resource type="Texture2D" uid="uid://bru33sl6hul2t" path="res://assets/player/default.png" id="2_0c733"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cb4meyp8qrbjc" path="res://assets/player/spin5.png" id="7_ty1jr"]
 [ext_resource type="Texture2D" uid="uid://kcen6nlecqxo" path="res://assets/player/spin6.png" id="8_c0ix5"]
 [ext_resource type="Texture2D" uid="uid://cu8k4ybmi461q" path="res://assets/player/spin7.png" id="9_njmct"]
+[ext_resource type="Texture2D" uid="uid://dqfdisquvrgg2" path="res://assets/player/spin8.png" id="10_ippf2"]
 [ext_resource type="Texture2D" uid="uid://bnpvxa1daiomp" path="res://assets/player/turn1.png" id="11_074a6"]
 [ext_resource type="Texture2D" uid="uid://cdlslmnv2kd7u" path="res://assets/player/turn2.png" id="12_rrdxf"]
 [ext_resource type="Texture2D" uid="uid://bd4ilva4c3piu" path="res://assets/player/turn3.png" id="13_oxr6g"]
@@ -60,6 +61,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("9_njmct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ippf2")
 }],
 "loop": true,
 "name": &"spin",
@@ -75,7 +79,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("13_oxr6g")
 }],
-"loop": false,
+"loop": true,
 "name": &"turn",
 "speed": 5.0
 }, {
@@ -129,7 +133,3 @@ animation = &"walk"
 
 [node name="#AudioListener2D" type="AudioListener2D" parent="."]
 current = true
-
-[connection signal="input_event" from="CharacterBody2D" to="CharacterBody2D" method="_on_input_event"]
-[connection signal="animation_finished" from="CharacterBody2D/Sprite" to="CharacterBody2D" method="_on_sprite_animation_finished"]
-[connection signal="animation_looped" from="CharacterBody2D/Sprite" to="CharacterBody2D" method="_on_sprite_animation_looped"]
