@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bt0dypks7hq6j"]
+[gd_scene load_steps=24 format=3 uid="uid://bt0dypks7hq6j"]
 
 [ext_resource type="Texture2D" uid="uid://cevgkc45x7x86" path="res://assets/levels/forest_foreground.png" id="1_fqg5l"]
 [ext_resource type="Texture2D" uid="uid://dykqiai342mw6" path="res://assets/levels/forest_background.png" id="1_vvnpt"]
@@ -11,6 +11,12 @@
 [ext_resource type="AudioStream" uid="uid://cr3th5umfo3ao" path="res://audio/environment/electronics/626963__klankbeeld__vlissingen-coast-area-marine-radio-nl-220221.ogg" id="7_w7sf8"]
 [ext_resource type="PackedScene" uid="uid://dc1jmnnl2qljv" path="res://radio.tscn" id="8_1dy8s"]
 [ext_resource type="AudioStream" uid="uid://2hphcsfw7xeu" path="res://audio/environment/electronics/257879__zmobie__short-wave-radio-noise-2.wav" id="8_x6lfx"]
+[ext_resource type="AudioStream" uid="uid://dqobslbin14is" path="res://audio/environment/life/707979__kaylinschafer__sfxbushes-ext_rustling-through-bushes_kaylin_owsfx.wav" id="12_1ndtv"]
+[ext_resource type="Script" path="res://scenes/bushes.gd" id="13_kkya3"]
+[ext_resource type="AudioStream" uid="uid://x1c06wbuq0v8" path="res://audio/environment/life/371314__freemaster2__creepy-chorus-of-crows.wav" id="14_vsl4y"]
+[ext_resource type="Script" path="res://scenes/crows.gd" id="15_rl1cn"]
+[ext_resource type="AudioStream" uid="uid://d2m5aaurxi5wu" path="res://audio/environment/electronics/zapsplat_horror_airy_wind_swell_ghostly_chilling_cold_107861.mp3" id="16_vvyr8"]
+[ext_resource type="Script" path="res://scenes/horror_wind.gd" id="17_nd7t3"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ihdx5"]
 a = Vector2(-530, -97)
@@ -89,6 +95,7 @@ collision_layer = 2
 
 [node name="RadioVoices" type="AudioStreamPlayer2D" parent="Radio"]
 stream = ExtResource("7_w7sf8")
+volume_db = -10.0
 autoplay = true
 max_distance = 360.0
 
@@ -100,16 +107,57 @@ max_distance = 360.0
 
 [node name="MountainWind" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_4fx5q")
-volume_db = -18.0
+volume_db = -20.0
 autoplay = true
 max_distance = 20000.0
 panning_strength = 0.2
+bus = &"MountainTrail"
 
 [node name="Cicadas" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_6pwka")
-volume_db = -27.0
+volume_db = -22.0
 autoplay = true
 max_distance = 20000.0
 panning_strength = 0.5
+bus = &"MountainTrail"
+
+[node name="Bushes" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_1ndtv")
+volume_db = 1.0
+max_distance = 360.0
+bus = &"MountainTrail"
+script = ExtResource("13_kkya3")
+
+[node name="Timer" type="Timer" parent="Bushes"]
+wait_time = 7.0
+one_shot = true
+autostart = true
+
+[node name="Crows" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_vsl4y")
+volume_db = -10.0
+max_distance = 360.0
+script = ExtResource("15_rl1cn")
+
+[node name="Timer" type="Timer" parent="Crows"]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="HorrorWind" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("16_vvyr8")
+volume_db = -10.0
+max_distance = 20000.0
+panning_strength = 0.0
+script = ExtResource("17_nd7t3")
+
+[node name="Timer" type="Timer" parent="HorrorWind"]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Bushes/Timer" to="Bushes" method="_on_timer_timeout"]
+[connection signal="timeout" from="Crows/Timer" to="Crows" method="_on_timer_timeout"]
+[connection signal="timeout" from="HorrorWind/Timer" to="HorrorWind" method="_on_timer_timeout"]
 
 [editable path="Radio/Interaction Point"]

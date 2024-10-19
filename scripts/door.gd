@@ -21,3 +21,7 @@ func _on_area_entered(area):
 func _on_area_exited(area):
 	#if area == player:
 	is_collision = false
+
+
+func _on_timer_timeout() -> void:
+	pass # Replace with function body.
