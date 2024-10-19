@@ -6,7 +6,7 @@ var radio_triggereded : bool = false
 enum DESTINATION {MountainTrailStart = 0, MountainTrailEnd, HospitalEntrance, CorridorEntrance}
 var pausing :bool=false
 var destination_coordinates = {
-	DESTINATION.HospitalEntrance: Vector2(686,139),
+	DESTINATION.HospitalEntrance: Vector2(367,-501),
 	DESTINATION.MountainTrailStart: Vector2(24,66),
 	DESTINATION.CorridorEntrance: Vector2(-1072,-637),
 }
