@@ -1,17 +1,18 @@
 extends Node2D
-
-@export var destination : Global.DESTINATION
 var is_collision : bool = false
+signal display_poster
+var poster_scene = preload("res://scenes/poster.tscn")
+var poster_instance = poster_scene.instantiate()
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if (Input.is_action_just_released("Move Up") and is_collision):
+	if (Input.is_action_just_released("Interact") and is_collision):
 		is_collision = false
-		Global.teleported.emit(destination)
+		Global.display_poster(poster_instance)
+		
 	pass
 
 func _on_area_entered(area):
