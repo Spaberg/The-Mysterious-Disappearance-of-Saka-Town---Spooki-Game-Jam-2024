@@ -70,6 +70,7 @@ shape = SubResource("SegmentShape2D_nugxe")
 
 [node name="Door" parent="." instance=ExtResource("3_o86my")]
 position = Vector2(682, 162)
+destination = 2
 
 [node name="Poster (not working)" parent="." instance=ExtResource("4_vg7hw")]
 position = Vector2(299, 159)

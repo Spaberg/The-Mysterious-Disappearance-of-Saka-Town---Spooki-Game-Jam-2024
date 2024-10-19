@@ -8,7 +8,7 @@ var pausing :bool=false
 var destination_coordinates = {
 	DESTINATION.HospitalEntrance: Vector2(205,658),
 	DESTINATION.MountainTrailStart: Vector2(24,66),
-	DESTINATION.CorridorEntrance: Vector2(-1072,-637),
+	DESTINATION.CorridorEntrance: Vector2(-1013,-574),
 }
 
 signal radio_triggered

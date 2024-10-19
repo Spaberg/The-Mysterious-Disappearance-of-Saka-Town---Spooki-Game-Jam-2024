@@ -14,7 +14,7 @@ var testspawnposition = Vector2(-1072,-637)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	get_parent().position = Vector2(-1072,-637)
+	get_parent().position = Vector2(-1566,178)
 	Global.teleported.connect(_on_teleported)
 	pass # Replace with function body.
 

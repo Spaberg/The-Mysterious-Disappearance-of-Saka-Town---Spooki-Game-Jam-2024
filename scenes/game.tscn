@@ -20,6 +20,12 @@ position = Vector2(663, 4)
 [node name="hospital_outside" parent="." instance=ExtResource("6_qonim")]
 position = Vector2(107, 545)
 
+[node name="Demo mountain trail" parent="." instance=ExtResource("6_bk4nu")]
+position = Vector2(-1743, 72)
+
+[node name="Corridor" parent="." instance=ExtResource("7_c2f50")]
+position = Vector2(-1036, -687)
+
 [node name="Teleport Positions" type="Node" parent="."]
 
 [node name="HospitalEntrance" type="Marker2D" parent="Teleport Positions"]
@@ -27,6 +33,9 @@ position = Vector2(205, 658)
 
 [node name="Mountain Trail Start" type="Marker2D" parent="Teleport Positions"]
 position = Vector2(24, 66)
+
+[node name="CorridorEntrance" type="Marker2D" parent="Teleport Positions"]
+position = Vector2(-1013, -574)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(155, 93)
@@ -39,6 +48,3 @@ texture = ExtResource("5_3b2nu")
 
 [node name="PlayerPosition" type="Marker2D" parent="."]
 position = Vector2(-1566, 178)
-
-[node name="Demo mountain trail" parent="." instance=ExtResource("6_bk4nu")]
-position = Vector2(-1743, 72)

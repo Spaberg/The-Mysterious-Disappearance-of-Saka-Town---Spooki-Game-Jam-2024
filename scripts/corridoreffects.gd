@@ -15,4 +15,6 @@ func _on_radio_triggered():
 
 func _on_audio_finished():
 	print("finish")
-	$Sprite2D/brightlight.color = Color(0,0,0.55,1)
+	$Sprite2D/TubeLight.visible = true
+	$Sprite2D/LightOccluder2D.visible = true
+	# $Sprite2D/brightlight.color = Color(0,0,0.55,1)
