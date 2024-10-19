@@ -24,7 +24,7 @@ position = Vector2(686, 139)
 [node name="MountainTrailStart" type="Marker2D" parent="Teleport Positions"]
 position = Vector2(24, 66)
 
-[node name="Marker2D" type="Marker2D" parent="Teleport Positions"]
+[node name="CorridorEntrance" type="Marker2D" parent="Teleport Positions"]
 position = Vector2(-615, -130)
 
 [node name="Camera2D" type="Camera2D" parent="."]
