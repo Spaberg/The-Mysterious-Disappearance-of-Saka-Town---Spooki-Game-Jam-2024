@@ -33,7 +33,7 @@ scale = Vector2(1.79609, 1.9625)
 texture = ExtResource("5_3b2nu")
 
 [node name="PlayerPosition" type="Marker2D" parent="."]
-position = Vector2(-1566, 178)
+position = Vector2(-1748, 314)
 
 [node name="Demo mountain trail" parent="." instance=ExtResource("6_bk4nu")]
 position = Vector2(-1743, 72)
