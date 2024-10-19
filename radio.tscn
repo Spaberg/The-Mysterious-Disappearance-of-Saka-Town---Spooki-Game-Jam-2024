@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dc1jmnnl2qljv"]
+[gd_scene load_steps=11 format=3 uid="uid://7qncx5s6wjag"]
 
 [ext_resource type="Texture2D" uid="uid://dxoencmpi4a5h" path="res://assets/pictures/1941_CGE_KL-500_radio.jpg" id="1_63gm7"]
 [ext_resource type="Script" path="res://radio_tuner.gd" id="1_awbp3"]

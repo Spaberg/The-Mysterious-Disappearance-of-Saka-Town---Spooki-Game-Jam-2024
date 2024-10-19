@@ -3,8 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cevgkc45x7x86" path="res://assets/levels/forest_foreground.png" id="1_fqg5l"]
 [ext_resource type="Texture2D" uid="uid://dykqiai342mw6" path="res://assets/levels/forest_background.png" id="1_vvnpt"]
 [ext_resource type="PackedScene" uid="uid://cg2v3maimdlql" path="res://scenes/door.tscn" id="3_o86my"]
-[ext_resource type="AudioStream" uid="uid://bjx1gvgstbaf7" path="res://audio/environment/electronics/zapsplat_nature_wind_strong_constant_around_mountains_97997.mp3" id="4_4fx5q"]
-[ext_resource type="AudioStream" uid="uid://cabego4pciah" path="res://audio/environment/life/higurashi-cry1.mp3" id="5_6pwka"]
+[ext_resource type="PackedScene" uid="uid://ck7pd6crsnpfc" path="res://scenes/interaction_point.tscn" id="4_vg7hw"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ihdx5"]
 a = Vector2(-530, -97)
@@ -65,20 +64,5 @@ shape = SubResource("SegmentShape2D_nugxe")
 [node name="Door" parent="." instance=ExtResource("3_o86my")]
 position = Vector2(682, 162)
 
-[node name="MountainWind" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_4fx5q")
-volume_db = -18.0
-autoplay = true
-max_distance = 20000.0
-panning_strength = 0.2
-bus = &"Outside"
-
-[node name="Cicadas" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_6pwka")
-volume_db = -27.0
-autoplay = true
-max_distance = 20000.0
-panning_strength = 0.5
-bus = &"Outside"
 [node name="Interaction point" parent="." instance=ExtResource("4_vg7hw")]
 position = Vector2(129, 68)
