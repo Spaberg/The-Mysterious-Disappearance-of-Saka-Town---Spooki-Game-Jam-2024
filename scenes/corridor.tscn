@@ -1,19 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://c3n77sjqh0ebj"]
 
-[ext_resource type="Script" path="res://scripts/corridoreffects.gd" id="1_mgskb"]
 [ext_resource type="Texture2D" uid="uid://dq1no4nwlhapm" path="res://assets/levels/corridor.png" id="1_v34yy"]
 [ext_resource type="Texture2D" uid="uid://dv4gjbn2pknyk" path="res://assets/textures/256x256_textures_101.png" id="2_3nrvw"]
-[ext_resource type="Texture2D" uid="uid://bj1sbe7io76y4" path="res://assets/pictures/vintage-radio.png" id="4_hbo65"]
-[ext_resource type="Script" path="res://scenes/radio_player.gd" id="5_fjpx8"]
-[ext_resource type="AudioStream" uid="uid://cr3th5umfo3ao" path="res://audio/environment/electronics/626963__klankbeeld__vlissingen-coast-area-marine-radio-nl-220221.ogg" id="6_628vg"]
-[ext_resource type="AudioStream" uid="uid://2hphcsfw7xeu" path="res://audio/environment/electronics/257879__zmobie__short-wave-radio-noise-2.wav" id="7_apqhd"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_hfedn"]
 a = Vector2(195, 78)
 b = Vector2(-186, 78)
 
 [node name="Corridor" type="Node2D"]
-script = ExtResource("1_mgskb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(161, 89)
@@ -37,20 +31,3 @@ scale = Vector2(9.64738, 3.60596)
 energy = 1.51
 blend_mode = 1
 texture = ExtResource("2_3nrvw")
-
-[node name="Radio" type="Sprite2D" parent="."]
-position = Vector2(251, 130)
-scale = Vector2(0.02, 0.02)
-texture = ExtResource("4_hbo65")
-script = ExtResource("5_fjpx8")
-
-[node name="RadioVoices" type="AudioStreamPlayer2D" parent="Radio"]
-stream = ExtResource("6_628vg")
-autoplay = true
-max_distance = 360.0
-
-[node name="RadioVoiceAndNoise" type="AudioStreamPlayer2D" parent="Radio"]
-stream = ExtResource("7_apqhd")
-volume_db = -15.0
-autoplay = true
-max_distance = 360.0
