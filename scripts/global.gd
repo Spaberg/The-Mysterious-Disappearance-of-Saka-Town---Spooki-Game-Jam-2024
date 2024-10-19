@@ -1,5 +1,7 @@
 extends Node2D
 
+var radio_pct : float = 0
+
 enum DESTINATION {MountainTrailStart = 0, MountainTrailEnd, HospitalEntrance}
 
 var destination_coordinates = {
