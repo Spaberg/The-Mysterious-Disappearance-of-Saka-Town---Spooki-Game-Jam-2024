@@ -1,11 +1,12 @@
 extends Node2D
-
 var radio_pct : float = 0
 
-enum DESTINATION {MountainTrailStart = 0, MountainTrailEnd, HospitalEntrance}
+enum DESTINATION {MountainTrailStart = 0, MountainTrailEnd, HospitalEntrance, CorridorEntrance}
 
 var destination_coordinates = {
 	DESTINATION.HospitalEntrance: Vector2(686,139),
+	DESTINATION.MountainTrailStart: Vector2(24,66),
+	DESTINATION.CorridorEntrance: Vector2(-612,-126),
 }
 
 signal teleported
