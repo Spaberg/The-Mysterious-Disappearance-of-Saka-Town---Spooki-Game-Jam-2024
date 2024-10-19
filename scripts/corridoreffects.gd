@@ -1,8 +1,8 @@
-extends PointLight2D
-
+extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Global.radio_triggered.connect(_on_radio_triggered)
 	pass # Replace with function body.
 
 
@@ -10,9 +10,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
-func _on_flicker_timer_timeout() -> void:
-	enabled = !enabled
-	$FlickerTimer.wait_time = randf()*0.5
-	$FlickerTimer.start()
-	
+func _on_radio_triggered():
+	$Sprite2D/brightlight.color = Color(1,1,1,1)
+	pass
