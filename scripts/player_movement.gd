@@ -7,11 +7,11 @@ enum State {WALKING, STANDING, LOOKING, TURNING}
 var player_state : State = State.STANDING
 
 
-const run_speed := 25.0
+const run_speed := 25.0*6
 var gravity := ProjectSettings.get("physics/2d/default_gravity") as float
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	get_parent().position = Vector2(-1720,290)
+	get_parent().position = Vector2(-3020,290)
 	Global.teleported.connect(_on_teleported)
 	pass # Replace with function body.
 

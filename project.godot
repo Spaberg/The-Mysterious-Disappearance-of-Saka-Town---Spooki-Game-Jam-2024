@@ -22,8 +22,8 @@ Player="*res://scenes/player.tscn"
 
 [display]
 
-window/size/viewport_width=320
-window/size/viewport_height=180
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/size/mode=4
 window/size/resizable=false
 window/stretch/mode="viewport"

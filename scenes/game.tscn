@@ -12,6 +12,20 @@ script = ExtResource("1_8rq3n")
 
 [node name="mountain trail" parent="." instance=ExtResource("1_1u3nf")]
 
+[node name="HighFreqACSound" parent="mountain trail/AC" index="0"]
+autoplay = false
+
+[node name="WideFreqACSound" parent="mountain trail/AC" index="1"]
+autoplay = false
+
+[node name="RadioVoices" parent="mountain trail/Radio" index="0"]
+volume_db = -80.0
+autoplay = false
+
+[node name="RadioVoiceAndNoise" parent="mountain trail/Radio" index="1"]
+volume_db = -80.0
+autoplay = false
+
 [node name="Hospital" parent="." instance=ExtResource("3_x8oae")]
 position = Vector2(663, 4)
 
@@ -36,4 +50,12 @@ texture = ExtResource("5_3b2nu")
 position = Vector2(-1748, 314)
 
 [node name="Demo mountain trail" parent="." instance=ExtResource("6_bk4nu")]
-position = Vector2(-1743, 72)
+position = Vector2(-1741, 78)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+position = Vector2(-2010, -77)
+color = Color(0.0823529, 0.52549, 0.94902, 1)
+energy = 0.5
+blend_mode = 1
+
+[editable path="mountain trail"]
