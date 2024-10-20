@@ -1,7 +1,60 @@
-[gd_scene load_steps=6 format=3 uid="uid://bkwnia2jy6pov"]
+[gd_scene load_steps=15 format=3 uid="uid://bkwnia2jy6pov"]
 
 [ext_resource type="Texture2D" uid="uid://cun7brtavd3fb" path="res://assets/levels/classroom_background.png" id="1_j3agd"]
+[ext_resource type="Texture2D" uid="uid://do4x82r0elos3" path="res://assets/pictures/classroom_door_anim1.png" id="1_l1tm0"]
+[ext_resource type="Texture2D" uid="uid://p5idnrybkgmc" path="res://assets/pictures/classroom_door_anim2.png" id="2_ah7d6"]
 [ext_resource type="Texture2D" uid="uid://jt8qxghum301" path="res://assets/levels/classroom_forground.png" id="2_qnns4"]
+[ext_resource type="Texture2D" uid="uid://dmxla3e2ckip0" path="res://assets/pictures/classroom_door_anim3.png" id="3_p0r08"]
+[ext_resource type="Texture2D" uid="uid://de4p688oktffq" path="res://assets/pictures/classroom_door_anim4.png" id="4_tup4w"]
+[ext_resource type="Texture2D" uid="uid://ctvr3atn5gvy6" path="res://assets/pictures/classroom_door_anim5.png" id="5_iow7b"]
+[ext_resource type="Texture2D" uid="uid://cxhchagx4xmgw" path="res://assets/pictures/classroom_door_anim6.png" id="6_78c4s"]
+[ext_resource type="Texture2D" uid="uid://d1cukd11u8plu" path="res://assets/pictures/classroom_door_anim7.png" id="7_6b008"]
+[ext_resource type="PackedScene" uid="uid://cg2v3maimdlql" path="res://scenes/door.tscn" id="10_t4chm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ldk7w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_l1tm0")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_l1tm0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ah7d6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_p0r08")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tup4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_iow7b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_78c4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6b008")
+}],
+"loop": true,
+"name": &"open",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_6b008")
+}],
+"loop": true,
+"name": &"opened",
+"speed": 5.0
+}]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_0scb6"]
 a = Vector2(-102, 44)
@@ -16,6 +69,14 @@ a = Vector2(166, -31)
 b = Vector2(166, 91)
 
 [node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 2
+position = Vector2(193, 87)
+sprite_frames = SubResource("SpriteFrames_ldk7w")
+animation = &"open"
+frame = 1
+frame_progress = 0.388885
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -35,8 +96,13 @@ position = Vector2(189, 90)
 shape = SubResource("SegmentShape2D_0scb6")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-1, 0)
+position = Vector2(83, 3)
 shape = SubResource("SegmentShape2D_vu1d3")
+
+[node name="Door" parent="StaticBody2D/CollisionShape2D2" instance=ExtResource("10_t4chm")]
+visible = false
+position = Vector2(-74, -19)
+destination = 5
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(127, 48)
