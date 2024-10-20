@@ -3,19 +3,18 @@ extends Node2D
 @export var destination : Global.DESTINATION
 var is_collision : bool = false
 @export var is_disabled = false
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
 
+var is_entering : bool = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if (Input.is_action_just_pressed("Move Up") and is_collision):
-		await get_tree().create_timer(3).timeout
+	if (Input.is_action_pressed("Move Up") and is_collision) and not is_entering and Player.get_child(0).get_child(3).frame == 2 and Player.get_child(0).get_child(3).animation == "turn":
+		is_entering = true
+		await get_tree().create_timer(1).timeout
 		Global.player_used_door.emit()
 		is_collision = false
 		Global.teleported.emit(destination)
-	pass
+		is_entering = false
 
 func _on_area_entered(area):
 	Global.player_reached_door.emit()

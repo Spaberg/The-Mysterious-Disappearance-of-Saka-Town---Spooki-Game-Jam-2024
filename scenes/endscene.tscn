@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://deotlas1gofd8"]
+
+[node name="Endscene" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = true

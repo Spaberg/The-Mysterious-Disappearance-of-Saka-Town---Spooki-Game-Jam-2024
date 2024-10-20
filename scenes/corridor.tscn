@@ -193,8 +193,7 @@ max_distance = 2160.0
 position = Vector2(161, 89)
 scale = Vector2(1, 1.04)
 sprite_frames = SubResource("SpriteFrames_62yg0")
-animation = &"open"
-frame_progress = 0.398872
+animation = &"idle"
 
 [node name="longer corridor" type="Sprite2D" parent="."]
 z_index = -1
