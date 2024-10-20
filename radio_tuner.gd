@@ -1,4 +1,4 @@
-extends Node2D
+extends CanvasLayer
 
 var radio_curve : Curve = load("res://radio_curve.tres")
 
