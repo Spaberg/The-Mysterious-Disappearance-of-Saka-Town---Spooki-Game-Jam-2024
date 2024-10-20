@@ -76,7 +76,7 @@ position = Vector2(26.6666, -1.52588e-05)
 scale = Vector2(20, 20)
 stream = ExtResource("5_ba14d")
 autoplay = true
-max_distance = 360.0
+max_distance = 2160.0
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite2D"]
 visible = false
@@ -99,6 +99,7 @@ destination = 4
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Door"]
 stream = ExtResource("5_x7kjg")
+max_distance = 2160.0
 
 [node name="Radio" type="Sprite2D" parent="."]
 position = Vector2(263, 122)
@@ -113,12 +114,12 @@ poster_scene = ExtResource("8_grknm")
 [node name="RadioVoices" type="AudioStreamPlayer2D" parent="Radio"]
 stream = ExtResource("9_orufr")
 autoplay = true
-max_distance = 360.0
+max_distance = 2160.0
 
 [node name="RadioVoiceAndNoise" type="AudioStreamPlayer2D" parent="Radio"]
 stream = ExtResource("10_dmoh1")
 volume_db = -15.0
 autoplay = true
-max_distance = 360.0
+max_distance = 2160.0
 
 [connection signal="finished" from="Door/AudioStreamPlayer2D" to="." method="_on_audio_finished"]
