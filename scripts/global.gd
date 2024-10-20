@@ -16,6 +16,12 @@ signal radio_triggered
 signal teleported
 signal add_poster
 signal remove_poster
+signal player_reached_poster
+signal player_interacted
+signal player_reached_door
+signal player_used_door
+signal player_walked_away_from_poster
+signal player_walked_away_from_door
 
 func display_poster(scene_instance):
 	pausing = true

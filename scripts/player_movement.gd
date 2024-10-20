@@ -6,7 +6,6 @@ enum State {WALKING, STANDING, LOOKING, TURNING}
 
 var player_state : State = State.STANDING
 
-
 const run_speed := 25.0
 var gravity := ProjectSettings.get("physics/2d/default_gravity") as float
 # Called when the node enters the scene tree for the first time.
@@ -63,7 +62,6 @@ func _on_sprite_animation_looped() -> void:
 			sprite.flip_h = true
 		player_state = State.STANDING
 
-
 func _on_sprite_animation_finished() -> void:
 	if player_state == State.LOOKING and sprite.frame == 0:
 		sprite.play("default")
@@ -73,4 +71,5 @@ func _input(event):
 	if event.is_action_released("Move Up") and player_state == State.LOOKING:
 		sprite.play_backwards("turn")
 		
-		
+func toggle_question_mark():
+	$QuestionMark.visible = not $QuestionMark.visible
