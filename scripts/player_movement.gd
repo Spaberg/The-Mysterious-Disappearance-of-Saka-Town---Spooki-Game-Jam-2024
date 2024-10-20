@@ -7,11 +7,17 @@ enum State {WALKING, STANDING, LOOKING, TURNING}
 var player_state : State = State.STANDING
 
 
+
 const run_speed := 25.0*6
 var gravity := ProjectSettings.get("physics/2d/default_gravity") as float
+var normalspawnposition = Vector2(-1566,178)
+var testspawnposition = Vector2(-1072,-637)
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+
 	get_parent().position = Vector2(-3020,290)
+
 	Global.teleported.connect(_on_teleported)
 	pass # Replace with function body.
 
@@ -64,7 +70,7 @@ func _on_sprite_animation_looped() -> void:
 		player_state = State.STANDING
 
 
-func _on_sprite_animation_finished() -> void:
+func _on_sprite_animation_finished() -> void:	
 	if player_state == State.LOOKING and sprite.frame == 0:
 		sprite.play("default")
 		player_state = State.STANDING

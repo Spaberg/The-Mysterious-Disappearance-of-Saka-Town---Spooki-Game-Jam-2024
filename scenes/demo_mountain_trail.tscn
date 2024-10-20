@@ -1,16 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://bt0dypks7hq6j"]
+[gd_scene load_steps=29 format=3 uid="uid://cys0crrbgelf4"]
+
 
 [ext_resource type="Texture2D" uid="uid://cevgkc45x7x86" path="res://assets/levels/forest_foreground.png" id="1_fqg5l"]
 [ext_resource type="Texture2D" uid="uid://dykqiai342mw6" path="res://assets/levels/forest_background.png" id="1_vvnpt"]
-[ext_resource type="PackedScene" path="res://scenes/door.tscn" id="3_o86my"]
+[ext_resource type="PackedScene" uid="uid://cg2v3maimdlql" path="res://scenes/door.tscn" id="3_o86my"]
 [ext_resource type="AudioStream" uid="uid://bjx1gvgstbaf7" path="res://audio/environment/electronics/zapsplat_nature_wind_strong_constant_around_mountains_97997.mp3" id="4_4fx5q"]
 [ext_resource type="PackedScene" uid="uid://ck7pd6crsnpfc" path="res://scenes/interaction_point.tscn" id="4_vg7hw"]
 [ext_resource type="AudioStream" uid="uid://cabego4pciah" path="res://audio/environment/life/higurashi-cry1.mp3" id="5_6pwka"]
-[ext_resource type="Texture2D" uid="uid://bj1sbe7io76y4" path="res://assets/pictures/vintage-radio.png" id="5_g184v"]
-[ext_resource type="Script" path="res://scenes/radio_player.gd" id="6_lexs2"]
-[ext_resource type="AudioStream" uid="uid://cr3th5umfo3ao" path="res://audio/environment/electronics/626963__klankbeeld__vlissingen-coast-area-marine-radio-nl-220221.ogg" id="7_w7sf8"]
-[ext_resource type="PackedScene" uid="uid://dc1jmnnl2qljv" path="res://radio.tscn" id="8_1dy8s"]
-[ext_resource type="AudioStream" uid="uid://2hphcsfw7xeu" path="res://audio/environment/electronics/257879__zmobie__short-wave-radio-noise-2.wav" id="8_x6lfx"]
 [ext_resource type="AudioStream" uid="uid://dqobslbin14is" path="res://audio/environment/life/707979__kaylinschafer__sfxbushes-ext_rustling-through-bushes_kaylin_owsfx.wav" id="12_1ndtv"]
 [ext_resource type="Script" path="res://scenes/bushes.gd" id="13_kkya3"]
 [ext_resource type="AudioStream" uid="uid://x1c06wbuq0v8" path="res://audio/environment/life/371314__freemaster2__creepy-chorus-of-crows.wav" id="14_vsl4y"]
@@ -39,34 +35,11 @@ texture = ExtResource("1_vvnpt")
 polygon = PackedVector2Array(-703.167, -98.6667, -719, -6.66666, -580.833, 1.16667, -463.667, 15.5, -427, 16.1667, -348.333, 31.3333, -309.833, 47.3333, -210.333, 46.1667, -107.333, 60.1667, 31.8333, 79.6667, 54.6667, 82.8333, 139.333, 92.1667, 218.167, 89.3333, 271.333, 86.6667, 301.667, 87.8333, 379, 124.167, 417.667, 145, 518.333, 195.833, 621.667, 195, 633.333, 81.6667, 649.5, 255.667, -838.333, 195.667, -817.667, -123)
 
 [node name="Door" parent="." instance=ExtResource("3_o86my")]
-visible = false
-position = Vector2(950, 293)
+position = Vector2(951, 294)
+destination = 2
 
 [node name="Poster (not working)" parent="." instance=ExtResource("4_vg7hw")]
 position = Vector2(299, 159)
-
-[node name="Radio" type="Sprite2D" parent="."]
-position = Vector2(623, 200)
-scale = Vector2(0.02, 0.02)
-texture = ExtResource("5_g184v")
-script = ExtResource("6_lexs2")
-
-[node name="Interaction Point" parent="Radio" instance=ExtResource("4_vg7hw")]
-scale = Vector2(50, 50)
-poster_scene = ExtResource("8_1dy8s")
-
-[node name="Area2D" parent="Radio/Interaction Point/Sprite2D2" index="0"]
-collision_layer = 2
-
-[node name="RadioVoices" type="AudioStreamPlayer2D" parent="Radio"]
-stream = ExtResource("7_w7sf8")
-volume_db = -10.0
-max_distance = 360.0
-
-[node name="RadioVoiceAndNoise" type="AudioStreamPlayer2D" parent="Radio"]
-stream = ExtResource("8_x6lfx")
-volume_db = -15.0
-max_distance = 360.0
 
 [node name="MountainWind" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_4fx5q")
@@ -122,5 +95,3 @@ autostart = true
 [connection signal="timeout" from="Bushes/Timer" to="Bushes" method="_on_timer_timeout"]
 [connection signal="timeout" from="Crows/Timer" to="Crows" method="_on_timer_timeout"]
 [connection signal="timeout" from="HorrorWind/Timer" to="HorrorWind" method="_on_timer_timeout"]
-
-[editable path="Radio/Interaction Point"]
