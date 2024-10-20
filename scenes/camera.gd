@@ -16,8 +16,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	movingposition = Player.position
 	movingposition.x += lookOffset
-	movingposition.y -= 30
+	movingposition.y -= 30*6
 	position = movingposition
+	#position.y = lerp(position.y, movingposition.y, lookAheadSpeed * delta)
 	velocity = Player.get_node("CharacterBody2D").velocity.x
 	if(velocity>0):
 		lookOffset = lerp(lookOffset,lookAheadDistance,lookAheadSpeed*delta)
