@@ -10,8 +10,7 @@
 
 [node name="hospital_outside" parent="." instance=ExtResource("6_qonim")]
 light_mask = 2
-position = Vector2(7098, 1108)
-
+position = Vector2(-6182, -5291)
 scale = Vector2(6, 6)
 
 [node name="Demo mountain trail" parent="." instance=ExtResource("6_bk4nu")]
@@ -19,12 +18,12 @@ position = Vector2(-1743, 72)
 
 [node name="Corridor" parent="." instance=ExtResource("7_c2f50")]
 light_mask = 2
-position = Vector2(-1904, -9549)
+position = Vector2(-6174, 13689)
 scale = Vector2(6, 6)
 
 [node name="RadioRoom" parent="." instance=ExtResource("8_5f5v6")]
 light_mask = 2
-position = Vector2(-1993, 7566)
+position = Vector2(-6716, 4674)
 scale = Vector2(6, 6)
 
 [node name="Teleport Positions" type="Node" parent="."]
