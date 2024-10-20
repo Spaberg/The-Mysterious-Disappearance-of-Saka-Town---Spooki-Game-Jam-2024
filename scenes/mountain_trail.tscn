@@ -98,6 +98,7 @@ autoplay = true
 max_distance = 2160.0
 
 [node name="Door" parent="." instance=ExtResource("6_gmk5p")]
+visible = false
 position = Vector2(-8, -19)
 destination = 3
 

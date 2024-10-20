@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cxhchagx4xmgw" path="res://assets/pictures/classroom_door_anim6.png" id="6_78c4s"]
 [ext_resource type="Texture2D" uid="uid://d1cukd11u8plu" path="res://assets/pictures/classroom_door_anim7.png" id="7_6b008"]
 [ext_resource type="Script" path="res://scenes/radio_player.gd" id="8_txm0e"]
-[ext_resource type="PackedScene" uid="uid://i5b0lfouov0d" path="res://scenes/interaction_point_except_its_for_the_radio.tscn" id="9_xyfpq"]
+[ext_resource type="PackedScene" path="res://scenes/interaction_point_except_its_for_the_radio.tscn" id="9_xyfpq"]
 [ext_resource type="AudioStream" uid="uid://cr3th5umfo3ao" path="res://audio/environment/electronics/626963__klankbeeld__vlissingen-coast-area-marine-radio-nl-220221.ogg" id="10_7xqel"]
 [ext_resource type="PackedScene" uid="uid://cg2v3maimdlql" path="res://scenes/door.tscn" id="10_t4chm"]
 [ext_resource type="AudioStream" uid="uid://2hphcsfw7xeu" path="res://audio/environment/electronics/257879__zmobie__short-wave-radio-noise-2.wav" id="11_ouo2x"]
@@ -76,6 +76,7 @@ b = Vector2(166, 91)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 2
+texture_filter = 1
 position = Vector2(193, 87)
 sprite_frames = SubResource("SpriteFrames_ldk7w")
 animation = &"idle"

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bt0dypks7hq6j" path="res://scenes/demo_mountain_trail.tscn" id="6_bk4nu"]
 [ext_resource type="PackedScene" uid="uid://c0am8jbn7wvkl" path="res://scenes/hospital_outside.tscn" id="6_qonim"]
 [ext_resource type="PackedScene" uid="uid://c3n77sjqh0ebj" path="res://scenes/corridor.tscn" id="7_c2f50"]
-[ext_resource type="PackedScene" uid="uid://dj0y5eb5w24e1" path="res://ui.tscn" id="7_uyr31"]
+[ext_resource type="PackedScene" uid="uid://gy6dfg37usxc" path="res://ui.tscn" id="7_uyr31"]
 [ext_resource type="PackedScene" uid="uid://bkwnia2jy6pov" path="res://scenes/radioroom.tscn" id="8_5f5v6"]
 
 [node name="game" type="Node"]
