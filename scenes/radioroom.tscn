@@ -78,9 +78,8 @@ b = Vector2(166, 91)
 z_index = 2
 position = Vector2(193, 87)
 sprite_frames = SubResource("SpriteFrames_ldk7w")
-animation = &"open"
-frame = 1
-frame_progress = 0.388885
+animation = &"idle"
+frame_progress = 0.0333793
 
 [node name="Radio" type="Node2D" parent="."]
 z_index = 2
