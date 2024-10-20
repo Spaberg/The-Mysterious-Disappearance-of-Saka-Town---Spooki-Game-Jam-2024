@@ -1,7 +1,7 @@
 extends Camera2D
 
 var lookAheadDistance = 80.0
-var lookAheadSpeed = 1.5
+var lookAheadSpeed = 0.2
 var lookOffset : float 
 var velocity
 var movingposition : Vector2
