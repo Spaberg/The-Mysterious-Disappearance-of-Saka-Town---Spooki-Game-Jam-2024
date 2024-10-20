@@ -1,32 +1,39 @@
 [gd_scene load_steps=6 format=3 uid="uid://dc1jmnnl2qljv"]
 
-[ext_resource type="Texture2D" uid="uid://dxoencmpi4a5h" path="res://assets/pictures/1941_CGE_KL-500_radio.jpg" id="1_63gm7"]
 [ext_resource type="Script" path="res://radio_tuner.gd" id="1_awbp3"]
+[ext_resource type="Texture2D" uid="uid://dp0b18y3a16os" path="res://assets/pictures/radio.png" id="2_1pir8"]
 [ext_resource type="Texture2D" uid="uid://cp3a5ja4i74nc" path="res://assets/pictures/radio_marker.png" id="2_yx2xg"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yb35t"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lhupk"]
 
-[node name="Radio" type="Node2D"]
+[node name="Radio" type="CanvasLayer"]
 script = ExtResource("1_awbp3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_63gm7")
+texture_filter = 1
+position = Vector2(960, 540)
+scale = Vector2(6, 6)
+texture = ExtResource("2_1pir8")
 
 [node name="Control" type="Control" parent="."]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 0
 offset_left = -60.0
 offset_top = -45.0
 offset_right = -20.0
 offset_bottom = -5.0
+scale = Vector2(2, 2)
 
 [node name="HSlider" type="HSlider" parent="Control"]
 layout_mode = 0
-offset_right = 55.0
-offset_bottom = 32.0
+offset_left = 411.5
+offset_top = 308.0
+offset_right = 608.5
+offset_bottom = 341.0
+mouse_default_cursor_shape = 2
 theme_override_icons/grabber = ExtResource("2_yx2xg")
 theme_override_icons/grabber_highlight = ExtResource("2_yx2xg")
 theme_override_icons/grabber_disabled = ExtResource("2_yx2xg")

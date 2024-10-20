@@ -21,14 +21,16 @@
 [ext_resource type="Texture2D" uid="uid://cnj6scslhi5d6" path="res://assets/player/walk6.png" id="19_nc35i"]
 [ext_resource type="Texture2D" uid="uid://ch3jhfpbvvhvf" path="res://assets/player/walk7.png" id="20_tb8ax"]
 [ext_resource type="Texture2D" uid="uid://b0i7xygjqfam7" path="res://assets/player/walk8.png" id="21_4xqce"]
+[ext_resource type="AudioStream" uid="uid://cphgosiy0oe4i" path="res://audio/environment/life/RightForestFootstep.ogg" id="21_fh857"]
+[ext_resource type="AudioStream" uid="uid://bu6n4bi552tlx" path="res://audio/environment/life/LeftForestFootstep.ogg" id="22_rvgqu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_64o7j"]
-radius = 23.0
-height = 62.0
+radius = 138.0
+height = 276.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s6veh"]
-radius = 16.0
-height = 54.0
+radius = 96.0
+height = 192.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_47c53"]
 animations = [{
@@ -112,6 +114,7 @@ animations = [{
 
 [node name="Player" type="Node2D"]
 z_index = 1
+texture_filter = 1
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("1_ok1q6")
@@ -129,18 +132,32 @@ text = "[center]?[/center]"
 [node name="Area2D" type="Area2D" parent="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+position = Vector2(0, 50)
 shape = SubResource("CapsuleShape2D_64o7j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 75)
 shape = SubResource("CapsuleShape2D_s6veh")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="CharacterBody2D"]
+scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_47c53")
 animation = &"walk"
 
 [node name="#AudioListener2D" type="AudioListener2D" parent="."]
 current = true
 
+[node name="RightForestFootstep" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("21_fh857")
+volume_db = -5.0
+panning_strength = 0.0
+
+[node name="LeftForestFootstep" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("22_rvgqu")
+volume_db = -5.0
+panning_strength = 0.0
+
 [connection signal="input_event" from="CharacterBody2D" to="CharacterBody2D" method="_on_input_event"]
 [connection signal="animation_finished" from="CharacterBody2D/Sprite" to="CharacterBody2D" method="_on_sprite_animation_finished"]
 [connection signal="animation_looped" from="CharacterBody2D/Sprite" to="CharacterBody2D" method="_on_sprite_animation_looped"]
+[connection signal="frame_changed" from="CharacterBody2D/Sprite" to="CharacterBody2D" method="_on_sprite_frame_changed"]

@@ -6,13 +6,17 @@ enum State {WALKING, STANDING, LOOKING, TURNING}
 
 var player_state : State = State.STANDING
 
-const run_speed := 25.0
+
+const run_speed := 25.0*6*6
+
 var gravity := ProjectSettings.get("physics/2d/default_gravity") as float
+var normalspawnposition = Vector2(-1566,178)
+var testspawnposition = Vector2(-1072,-637)
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	get_parent().position = Vector2(-1720,290)
+	get_parent().position = Vector2(-4971,128)
 	Global.teleported.connect(_on_teleported)
-	pass # Replace with function body.
 
 func _physics_process(delta: float) -> void:
 	var direction : float = Input.get_axis("Move Left","Move Right")
@@ -44,7 +48,6 @@ func _physics_process(delta: float) -> void:
 			player_state = State.LOOKING
 			sprite.play("turn")
 
-	
 	get_parent().position += position
 	position = Vector2(0,0)
 	if not Global.pausing:
@@ -62,7 +65,12 @@ func _on_sprite_animation_looped() -> void:
 			sprite.flip_h = true
 		player_state = State.STANDING
 
+<<<<<<< HEAD
 func _on_sprite_animation_finished() -> void:
+=======
+
+func _on_sprite_animation_finished() -> void:	
+>>>>>>> d5c66ee7bbcb4be7a4eea50392719f3bff0a8cec
 	if player_state == State.LOOKING and sprite.frame == 0:
 		sprite.play("default")
 		player_state = State.STANDING
@@ -70,6 +78,15 @@ func _on_sprite_animation_finished() -> void:
 func _input(event):
 	if event.is_action_released("Move Up") and player_state == State.LOOKING:
 		sprite.play_backwards("turn")
+<<<<<<< HEAD
 		
 func toggle_question_mark():
 	$QuestionMark.visible = not $QuestionMark.visible
+=======
+
+func _on_sprite_frame_changed() -> void:
+	if(sprite.frame == 2):
+		get_parent().find_child("RightForestFootstep").play()
+	elif(sprite.frame == 6):
+		get_parent().find_child("LeftForestFootstep").play()
+>>>>>>> d5c66ee7bbcb4be7a4eea50392719f3bff0a8cec

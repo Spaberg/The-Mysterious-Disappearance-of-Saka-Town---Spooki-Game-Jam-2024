@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://c0am8jbn7wvkl"]
 
 [ext_resource type="Texture2D" uid="uid://bvyclu24erwcf" path="res://assets/levels/hospital_outside2.png" id="1_er6jt"]
-[ext_resource type="PackedScene" uid="uid://cg2v3maimdlql" path="res://scenes/door.tscn" id="2_oyfxs"]
+[ext_resource type="PackedScene" path="res://scenes/door.tscn" id="2_oyfxs"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_83xnc"]
 a = Vector2(-462, -87)
@@ -18,7 +18,9 @@ b = Vector2(436, -95)
 [node name="hospital_outside" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(524, 86)
+
+light_mask = 2
+position = Vector2(522, 89)
 texture = ExtResource("1_er6jt")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
@@ -27,7 +29,7 @@ texture = ExtResource("1_er6jt")
 shape = SubResource("SegmentShape2D_83xnc")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(-2, 10)
+position = Vector2(0, 2)
 shape = SubResource("SegmentShape2D_gv275")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
@@ -35,5 +37,5 @@ position = Vector2(-123, 5)
 shape = SubResource("SegmentShape2D_bu0sw")
 
 [node name="Door" parent="." instance=ExtResource("2_oyfxs")]
-position = Vector2(412, -6)
+position = Vector2(411, -12)
 destination = 3

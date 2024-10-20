@@ -11,5 +11,10 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_radio_triggered():
-	$Sprite2D/brightlight.color = Color(1,1,1,1)
-	pass
+	$Door/AudioStreamPlayer2D.play()
+
+func _on_audio_finished():
+	print("finish")
+	$Sprite2D/TubeLight.visible = true
+	$Sprite2D/LightOccluder2D.visible = true
+	# $Sprite2D/brightlight.color = Color(0,0,0.55,1)
