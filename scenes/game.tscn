@@ -13,7 +13,7 @@
 
 [node name="hospital_outside" parent="." instance=ExtResource("6_qonim")]
 light_mask = 2
-position = Vector2(-6182, -5291)
+position = Vector2(-6182, 19180)
 scale = Vector2(6, 6)
 
 [node name="Demo mountain trail" parent="." instance=ExtResource("6_bk4nu")]
@@ -32,7 +32,8 @@ scale = Vector2(6, 6)
 [node name="Teleport Positions" type="Node" parent="."]
 
 [node name="HospitalEntrance" type="Marker2D" parent="Teleport Positions"]
-position = Vector2(-5630, -4582)
+position = Vector2(-5674, 19938)
+scale = Vector2(1.02, 1.02)
 
 [node name="Mountain Trail Start" type="Marker2D" parent="Teleport Positions"]
 position = Vector2(2341, 1397)
@@ -50,6 +51,7 @@ position = Vector2(-3259, 14421)
 visibility_layer = 3
 position = Vector2(-4970, -57)
 limit_left = -6159
+limit_bottom = 20253
 editor_draw_limits = true
 script = ExtResource("5_cw1dd")
 

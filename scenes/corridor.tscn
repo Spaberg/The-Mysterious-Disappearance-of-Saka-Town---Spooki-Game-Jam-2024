@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dv4gjbn2pknyk" path="res://assets/textures/256x256_textures_101.png" id="2_3nrvw"]
 [ext_resource type="Texture2D" uid="uid://c187km5iq0y5t" path="res://assets/textures/256x256_textures_101_cropped.png" id="3_bsau0"]
 [ext_resource type="Script" path="res://scripts/flickering_tube_light.gd" id="3_dy7vh"]
-[ext_resource type="Texture2D" uid="uid://bmnkbb2f5hfjc" path="res://assets/pictures/corridor_extended.png" id="3_tl8c2"]
+[ext_resource type="Texture2D" uid="uid://dcn7jafkx0dxe" path="res://assets/pictures/corridor_extended2.png" id="3_dye48"]
 [ext_resource type="PackedScene" uid="uid://cg2v3maimdlql" path="res://scenes/door.tscn" id="4_ako47"]
 [ext_resource type="AudioStream" uid="uid://dyrbhc55qjn8q" path="res://audio/environment/electronics/380660__arseniiv__fluorescent-lamp-flickering.wav" id="5_ba14d"]
 [ext_resource type="AudioStream" uid="uid://x1c06wbuq0v8" path="res://audio/environment/life/371314__freemaster2__creepy-chorus-of-crows.wav" id="5_x7kjg"]
@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://ca541wl3pab7x" path="res://assets/pictures/corridor_sliding_door4.png" id="17_07fop"]
 [ext_resource type="Texture2D" uid="uid://d24gu8b2o73wh" path="res://assets/pictures/corridor_sliding_door5.png" id="18_aeyek"]
 [ext_resource type="Texture2D" uid="uid://bgq26i0osoyql" path="res://assets/pictures/corridor_sliding_door6.png" id="19_205ri"]
-[ext_resource type="Texture2D" uid="uid://bupm4v6vwrmov" path="res://assets/pictures/corridor.png" id="20_pec8x"]
+[ext_resource type="Texture2D" uid="uid://ctt5msx7u8isi" path="res://assets/pictures/double_doors.png" id="20_g1ggx"]
 [ext_resource type="Texture2D" uid="uid://c4nj8wpnvqfse" path="res://assets/pictures/corridor_sliding_door7.png" id="20_vxol2"]
 [ext_resource type="Texture2D" uid="uid://b6a0bqdn6s4fm" path="res://assets/pictures/corridor_sliding_door8.png" id="21_yd3jc"]
 [ext_resource type="Texture2D" uid="uid://ertncploc478" path="res://assets/pictures/corridor_sliding_door9.png" id="22_j8rwr"]
@@ -107,7 +107,7 @@ texture = ExtResource("2_3nrvw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(161, 89)
-texture = ExtResource("3_tl8c2")
+texture = ExtResource("3_dye48")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
 position = Vector2(-1, -3)
@@ -121,7 +121,7 @@ position = Vector2(-226, 6)
 shape = SubResource("SegmentShape2D_rye2k")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(315, -6)
+position = Vector2(133, -7)
 shape = SubResource("SegmentShape2D_6nws7")
 
 [node name="brightlight" type="PointLight2D" parent="Sprite2D"]
@@ -140,7 +140,7 @@ texture = ExtResource("2_3nrvw")
 
 [node name="TubeLight" type="PointLight2D" parent="Sprite2D"]
 visible = false
-position = Vector2(-182.552, -40.888)
+position = Vector2(-164.552, -41.888)
 scale = Vector2(0.15, 0.15)
 color = Color(1, 0.976471, 0.898039, 1)
 shadow_enabled = true
@@ -162,7 +162,7 @@ max_distance = 2160.0
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite2D"]
 visible = false
-position = Vector2(-178.552, 1.112)
+position = Vector2(-160.552, 0.112)
 occluder = SubResource("OccluderPolygon2D_2ymww")
 
 [node name="darklight2" type="PointLight2D" parent="."]
@@ -190,18 +190,17 @@ max_distance = 2160.0
 position = Vector2(161, 89)
 scale = Vector2(1, 1.04)
 sprite_frames = SubResource("SpriteFrames_62yg0")
-animation = &"idle"
-frame_progress = 0.048804
+animation = &"open"
+frame_progress = 0.241648
 
-[node name="mask2" type="Sprite2D" parent="."]
+[node name="longer corridor" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(409, 92)
-scale = Vector2(1.775, 0.959451)
-texture = ExtResource("20_pec8x")
+position = Vector2(1121, 89)
+scale = Vector2(-2, 1)
+texture = ExtResource("3_dye48")
 
-[node name="mask" type="Sprite2D" parent="."]
-position = Vector2(-17, 91)
-scale = Vector2(0.8875, 0.943923)
-texture = ExtResource("20_pec8x")
+[node name="closed_door" type="Sprite2D" parent="."]
+position = Vector2(161, 89)
+texture = ExtResource("20_g1ggx")
 
 [connection signal="finished" from="Door/AudioStreamPlayer2D" to="." method="_on_audio_finished"]
