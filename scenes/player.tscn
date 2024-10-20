@@ -24,12 +24,12 @@
 [ext_resource type="AudioStream" uid="uid://bu6n4bi552tlx" path="res://audio/environment/life/LeftForestFootstep.ogg" id="22_rvgqu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_64o7j"]
-radius = 23.0
-height = 62.0
+radius = 138.0
+height = 276.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s6veh"]
-radius = 16.0
-height = 54.0
+radius = 96.0
+height = 192.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_47c53"]
 animations = [{
@@ -113,6 +113,7 @@ animations = [{
 
 [node name="Player" type="Node2D"]
 z_index = 1
+texture_filter = 1
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("1_ok1q6")
@@ -120,12 +121,15 @@ script = ExtResource("1_ok1q6")
 [node name="Area2D" type="Area2D" parent="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+position = Vector2(0, 50)
 shape = SubResource("CapsuleShape2D_64o7j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 75)
 shape = SubResource("CapsuleShape2D_s6veh")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="CharacterBody2D"]
+scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_47c53")
 animation = &"walk"
 

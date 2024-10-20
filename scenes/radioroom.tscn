@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://bkwnia2jy6pov"]
+
+[ext_resource type="Texture2D" uid="uid://cun7brtavd3fb" path="res://assets/levels/classroom_background.png" id="1_j3agd"]
+[ext_resource type="Texture2D" uid="uid://jt8qxghum301" path="res://assets/levels/classroom_forground.png" id="2_qnns4"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_0scb6"]
+a = Vector2(-102, 44)
+b = Vector2(113, 44)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_vu1d3"]
+a = Vector2(93, 135)
+b = Vector2(93, 17)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_fffvc"]
+a = Vector2(166, -31)
+b = Vector2(166, 91)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(192, 87)
+texture = ExtResource("1_j3agd")
+
+[node name="mask" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(192, 87)
+texture = ExtResource("2_qnns4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(189, 90)
+shape = SubResource("SegmentShape2D_0scb6")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1, 0)
+shape = SubResource("SegmentShape2D_vu1d3")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(127, 48)
+shape = SubResource("SegmentShape2D_fffvc")
