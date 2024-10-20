@@ -17,29 +17,30 @@ script = ExtResource("1_8rq3n")
 position = Vector2(663, 4)
 
 [node name="hospital_outside" parent="." instance=ExtResource("6_qonim")]
-position = Vector2(107, 545)
+position = Vector2(-1902, 1108)
 
 [node name="Demo mountain trail" parent="." instance=ExtResource("6_bk4nu")]
 position = Vector2(-1743, 72)
 
 [node name="Corridor" parent="." instance=ExtResource("7_c2f50")]
-position = Vector2(-1064, -684)
+position = Vector2(-1904, -549)
 
 [node name="Teleport Positions" type="Node" parent="."]
 
 [node name="HospitalEntrance" type="Marker2D" parent="Teleport Positions"]
-position = Vector2(205, 658)
+position = Vector2(-1809, 1221)
 
 [node name="Mountain Trail Start" type="Marker2D" parent="Teleport Positions"]
 position = Vector2(24, 66)
 
 [node name="CorridorEntrance" type="Marker2D" parent="Teleport Positions"]
-position = Vector2(-1013, -574)
+position = Vector2(-1879, -440)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 visibility_layer = 3
 position = Vector2(-1736, 288)
-position_smoothing_speed = 1.0
+limit_left = -1900
+editor_draw_limits = true
 script = ExtResource("5_cw1dd")
 
 [node name="PlayerPosition" type="Marker2D" parent="."]
