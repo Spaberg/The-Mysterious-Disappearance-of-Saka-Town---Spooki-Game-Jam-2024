@@ -75,10 +75,7 @@ autostart = true
 position = Vector2(477, -4)
 stream = ExtResource("14_vsl4y")
 volume_db = -13.0
-
 max_distance = 2160.0
-bus = &"Crows"
-
 script = ExtResource("15_rl1cn")
 
 [node name="Timer" type="Timer" parent="Crows"]

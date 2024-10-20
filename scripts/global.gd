@@ -8,9 +8,9 @@ var radio_has_been_triggered : bool = false
 enum DESTINATION {MountainTrailStart = 0, MountainTrailEnd, HospitalEntrance, CorridorEntrance,RadioRoomEntrance}
 var pausing :bool=false
 var destination_coordinates = {
-	DESTINATION.HospitalEntrance: Vector2(-5597,-4602),
+	DESTINATION.HospitalEntrance: Vector2(-5630,-4580),
 	DESTINATION.MountainTrailStart: Vector2(2341,1397),
-	DESTINATION.CorridorEntrance: Vector2(-6046,14360),
+	DESTINATION.CorridorEntrance: Vector2(-6048,14430),
 	DESTINATION.RadioRoomEntrance: Vector2(-5044,5327),
 }
 

@@ -26,13 +26,13 @@ scale = Vector2(6, 6)
 [node name="Teleport Positions" type="Node" parent="."]
 
 [node name="HospitalEntrance" type="Marker2D" parent="Teleport Positions"]
-position = Vector2(-5630, -4602)
+position = Vector2(-5630, -4582)
 
 [node name="Mountain Trail Start" type="Marker2D" parent="Teleport Positions"]
 position = Vector2(2341, 1397)
 
 [node name="CorridorEntrance" type="Marker2D" parent="Teleport Positions"]
-position = Vector2(-6046, 14360)
+position = Vector2(-6048, 14430)
 
 [node name="RadioRoomEntrance" type="Marker2D" parent="Teleport Positions"]
 position = Vector2(-5044, 5327)

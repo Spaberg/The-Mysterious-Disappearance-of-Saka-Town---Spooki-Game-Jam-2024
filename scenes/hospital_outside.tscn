@@ -18,7 +18,7 @@ b = Vector2(436, -95)
 [node name="hospital_outside" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(524, 86)
+position = Vector2(522, 89)
 texture = ExtResource("1_er6jt")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
@@ -27,7 +27,7 @@ texture = ExtResource("1_er6jt")
 shape = SubResource("SegmentShape2D_83xnc")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(-2, 4)
+position = Vector2(0, 2)
 shape = SubResource("SegmentShape2D_gv275")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
