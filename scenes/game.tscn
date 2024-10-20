@@ -9,18 +9,22 @@
 [node name="game" type="Node"]
 
 [node name="hospital_outside" parent="." instance=ExtResource("6_qonim")]
-position = Vector2(-6182, -5291)
+light_mask = 2
+position = Vector2(7098, 1108)
+
 scale = Vector2(6, 6)
 
 [node name="Demo mountain trail" parent="." instance=ExtResource("6_bk4nu")]
 position = Vector2(-1743, 72)
 
 [node name="Corridor" parent="." instance=ExtResource("7_c2f50")]
-position = Vector2(-6174, 13689)
+light_mask = 2
+position = Vector2(-1904, -9549)
 scale = Vector2(6, 6)
 
 [node name="RadioRoom" parent="." instance=ExtResource("8_5f5v6")]
-position = Vector2(-6716, 4674)
+light_mask = 2
+position = Vector2(-1993, 7566)
 scale = Vector2(6, 6)
 
 [node name="Teleport Positions" type="Node" parent="."]
