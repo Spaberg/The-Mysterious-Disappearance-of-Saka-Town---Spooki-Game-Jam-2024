@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cre5nt2fstdw"]
+[gd_scene load_steps=6 format=3 uid="uid://bkwnia2jy6pov"]
 
 [ext_resource type="Texture2D" uid="uid://cun7brtavd3fb" path="res://assets/levels/classroom_background.png" id="1_j3agd"]
 [ext_resource type="Texture2D" uid="uid://jt8qxghum301" path="res://assets/levels/classroom_forground.png" id="2_qnns4"]
