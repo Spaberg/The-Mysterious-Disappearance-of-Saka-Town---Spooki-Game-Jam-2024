@@ -15,6 +15,8 @@ var destination_coordinates = {
 	DESTINATION.RadioRoomOut: Vector2(-3259,14421),
 }
 
+# Is this essentially just signal processing?
+
 signal radio_triggered
 
 signal teleported
@@ -26,6 +28,7 @@ signal player_reached_door
 signal player_used_door
 signal player_walked_away_from_poster
 signal player_walked_away_from_door
+signal radio_finished
 
 func display_poster(scene_instance):
 	pausing = true
