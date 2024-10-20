@@ -1,8 +1,74 @@
-[gd_scene format=3 uid="uid://deotlas1gofd8"]
+[gd_scene load_steps=3 format=3 uid="uid://deotlas1gofd8"]
+
+[ext_resource type="Script" path="res://scenes/endscene.gd" id="1_hhg4c"]
+[ext_resource type="PackedScene" uid="uid://cmo6koiyukaqo" path="res://scenes/end_eye.tscn" id="2_hisfg"]
 
 [node name="Endscene" type="Node2D"]
+scale = Vector2(6, 6)
+script = ExtResource("1_hhg4c")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D12" parent="." instance=ExtResource("2_hisfg")]
+visible = false
+position = Vector2(292.333, 147.333)
+rotation = -0.536766
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D11" parent="." instance=ExtResource("2_hisfg")]
+visible = false
+position = Vector2(116.333, 11)
+rotation = -0.380477
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D7" parent="." instance=ExtResource("2_hisfg")]
+visible = false
+position = Vector2(62, 40.1667)
+
+[node name="AnimatedSprite2D6" parent="." instance=ExtResource("2_hisfg")]
+visible = false
+position = Vector2(272.167, 63.8333)
+rotation = 0.548793
+
+[node name="AnimatedSprite2D5" parent="." instance=ExtResource("2_hisfg")]
+visible = false
+position = Vector2(60.5, 139.833)
+
+[node name="AnimatedSprite2D2" parent="." instance=ExtResource("2_hisfg")]
+visible = false
+position = Vector2(240.333, 142.667)
+rotation = 0.369973
+
+[node name="AnimatedSprite2D4" parent="." instance=ExtResource("2_hisfg")]
+visible = false
+position = Vector2(184, 94.3333)
+rotation = -0.337348
+scale = Vector2(1.56384, 1.70499)
+
+[node name="AnimatedSprite2D3" parent="." instance=ExtResource("2_hisfg")]
+visible = false
+position = Vector2(164.667, 45.5)
+rotation = -0.287027
+scale = Vector2(1.6414, 1.0218)
+
+[node name="AnimatedSprite2D9" parent="." instance=ExtResource("2_hisfg")]
+visible = false
+position = Vector2(242.167, 25.6667)
+rotation = 0.452376
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("2_hisfg")]
+visible = false
+position = Vector2(93.1667, 89.3333)
+rotation = 0.226188
+
+[node name="AnimatedSprite2D8" parent="." instance=ExtResource("2_hisfg")]
+visible = false
+position = Vector2(126.272, 136.479)
+rotation = -0.0358322
+scale = Vector2(1.19238, 1.71392)
+
+[node name="AnimatedSprite2D10" parent="." instance=ExtResource("2_hisfg")]
+visible = false
+position = Vector2(246.667, 102.167)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 autoplay = true

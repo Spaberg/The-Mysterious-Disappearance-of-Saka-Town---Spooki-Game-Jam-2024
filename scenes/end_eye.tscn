@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://cmo6koiyukaqo"]
+
+[ext_resource type="Texture2D" uid="uid://1it6grvvx6db" path="res://assets/pictures/eye_anim1.png" id="1_vkddk"]
+[ext_resource type="Texture2D" uid="uid://b0py32k4kjjxi" path="res://assets/pictures/eye_anim2.png" id="2_fj03g"]
+[ext_resource type="Texture2D" uid="uid://dy2wxxx4ikp6q" path="res://assets/pictures/eye_anim3.png" id="3_r1ywq"]
+[ext_resource type="Texture2D" uid="uid://co7jpxarwt5q6" path="res://assets/pictures/eye_anim4.png" id="4_2j53x"]
+[ext_resource type="Texture2D" uid="uid://bidbnx2gobciy" path="res://assets/pictures/eye_anim5.png" id="5_31xqf"]
+[ext_resource type="Texture2D" uid="uid://dw4cuj5ewyidy" path="res://assets/pictures/eye_anim6.png" id="6_adeij"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_75yc2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vkddk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fj03g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_r1ywq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2j53x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_31xqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_adeij")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+texture_filter = 1
+position = Vector2(809, 306)
+sprite_frames = SubResource("SpriteFrames_75yc2")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.149
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
