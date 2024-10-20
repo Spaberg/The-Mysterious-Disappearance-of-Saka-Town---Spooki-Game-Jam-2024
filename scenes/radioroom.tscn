@@ -80,7 +80,7 @@ texture_filter = 1
 position = Vector2(193, 87)
 sprite_frames = SubResource("SpriteFrames_ldk7w")
 animation = &"idle"
-frame_progress = 0.0333793
+frame_progress = 0.983267
 
 [node name="Radio" type="Node2D" parent="."]
 z_index = 2
@@ -119,7 +119,7 @@ position = Vector2(189, 90)
 shape = SubResource("SegmentShape2D_0scb6")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(83, 3)
+position = Vector2(80, 3)
 shape = SubResource("SegmentShape2D_vu1d3")
 
 [node name="Door" parent="StaticBody2D/CollisionShape2D2" instance=ExtResource("10_t4chm")]

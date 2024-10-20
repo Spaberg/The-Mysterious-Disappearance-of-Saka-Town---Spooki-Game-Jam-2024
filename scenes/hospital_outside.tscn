@@ -30,7 +30,7 @@ texture = ExtResource("1_er6jt")
 shape = SubResource("SegmentShape2D_83xnc")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(0, 2)
+position = Vector2(-1, 16)
 shape = SubResource("SegmentShape2D_gv275")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
