@@ -6,6 +6,8 @@ enum State {WALKING, STANDING, LOOKING, TURNING}
 
 var player_state : State = State.STANDING
 
+@onready var animation_player : AnimationPlayer = $AnimationPlayer
+
 
 const run_speed := 25.0*6*6
 

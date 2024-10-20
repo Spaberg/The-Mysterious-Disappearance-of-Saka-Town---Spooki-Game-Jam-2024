@@ -10,7 +10,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if (Input.is_action_just_released("Move Up") and is_collision):
+	if (Input.is_action_just_pressed("Move Up") and is_collision):
+		await get_tree().create_timer(3).timeout
 		Global.player_used_door.emit()
 		is_collision = false
 		Global.teleported.emit(destination)
