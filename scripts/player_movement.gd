@@ -45,7 +45,6 @@ func _physics_process(delta: float) -> void:
 			player_state = State.LOOKING
 			sprite.play("turn")
 
-	
 	get_parent().position += position
 	position = Vector2(0,0)
 	if not Global.pausing:
@@ -72,5 +71,9 @@ func _on_sprite_animation_finished() -> void:
 func _input(event):
 	if event.is_action_released("Move Up") and player_state == State.LOOKING:
 		sprite.play_backwards("turn")
-		
-		
+
+func _on_sprite_frame_changed() -> void:
+	if(sprite.frame == 2):
+		get_parent().find_child("RightForestFootstep").play()
+	elif(sprite.frame == 6):
+		get_parent().find_child("LeftForestFootstep").play()
