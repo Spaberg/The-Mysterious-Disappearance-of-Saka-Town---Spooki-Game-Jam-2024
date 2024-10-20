@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://bv8r37oq4vldh"]
+[gd_scene load_steps=7 format=3 uid="uid://bv8r37oq4vldh"]
 
 [ext_resource type="PackedScene" uid="uid://c521td2cttlo" path="res://scenes/mountain_trail.tscn" id="1_1u3nf"]
 [ext_resource type="Script" path="res://scripts/game_controller.gd" id="1_8rq3n"]
-[ext_resource type="PackedScene" uid="uid://hbrn6nekpwwm" path="res://scenes/hospital.tscn" id="3_x8oae"]
 [ext_resource type="Script" path="res://scenes/camera.gd" id="5_cw1dd"]
 [ext_resource type="PackedScene" uid="uid://cys0crrbgelf4" path="res://scenes/demo_mountain_trail.tscn" id="6_bk4nu"]
 [ext_resource type="PackedScene" uid="uid://c0am8jbn7wvkl" path="res://scenes/hospital_outside.tscn" id="6_qonim"]
@@ -27,28 +26,27 @@ autoplay = false
 volume_db = -80.0
 autoplay = false
 
-[node name="Hospital" parent="." instance=ExtResource("3_x8oae")]
-position = Vector2(663, 4)
-
 [node name="hospital_outside" parent="." instance=ExtResource("6_qonim")]
-position = Vector2(-1902, 1108)
+position = Vector2(7098, 1108)
+scale = Vector2(6, 6)
 
 [node name="Demo mountain trail" parent="." instance=ExtResource("6_bk4nu")]
 position = Vector2(-1743, 72)
 
 [node name="Corridor" parent="." instance=ExtResource("7_c2f50")]
-position = Vector2(-1904, -549)
+position = Vector2(-1904, -9549)
+scale = Vector2(6, 6)
 
 [node name="Teleport Positions" type="Node" parent="."]
 
 [node name="HospitalEntrance" type="Marker2D" parent="Teleport Positions"]
-position = Vector2(-1809, 1221)
+position = Vector2(7827, 1860)
 
 [node name="Mountain Trail Start" type="Marker2D" parent="Teleport Positions"]
-position = Vector2(24, 66)
+position = Vector2(2341, 1397)
 
 [node name="CorridorEntrance" type="Marker2D" parent="Teleport Positions"]
-position = Vector2(-1879, -440)
+position = Vector2(-1722, -8808)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 visibility_layer = 3
@@ -58,16 +56,12 @@ editor_draw_limits = true
 script = ExtResource("5_cw1dd")
 
 [node name="PlayerPosition" type="Marker2D" parent="."]
-position = Vector2(-1748, 314)
-
-[node name="Demo mountain trail" parent="." instance=ExtResource("6_bk4nu")]
-position = Vector2(-1741, 78)
+position = Vector2(-4978, 124)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-position = Vector2(-2010, -77)
+position = Vector2(-6349, -2212)
 color = Color(0.0823529, 0.52549, 0.94902, 1)
 energy = 0.5
 blend_mode = 1
 
 [editable path="mountain trail"]
-
