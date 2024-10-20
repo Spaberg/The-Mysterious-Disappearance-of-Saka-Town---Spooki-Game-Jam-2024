@@ -38,6 +38,7 @@ position = Vector2(-123, 5)
 shape = SubResource("SegmentShape2D_bu0sw")
 
 [node name="Door" parent="." instance=ExtResource("2_oyfxs")]
+visible = false
 position = Vector2(411, -12)
 destination = 3
 
