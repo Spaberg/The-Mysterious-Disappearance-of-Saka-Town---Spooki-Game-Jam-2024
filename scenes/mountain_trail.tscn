@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://scripts/flickering_light.gd" id="4_b1qmy"]
 [ext_resource type="Texture2D" uid="uid://crydpx3ox22ur" path="res://assets/textures/256x256 textures (9).png" id="4_x3lah"]
 [ext_resource type="AudioStream" uid="uid://dyrbhc55qjn8q" path="res://audio/environment/electronics/380660__arseniiv__fluorescent-lamp-flickering.wav" id="5_irxq3"]
-[ext_resource type="PackedScene" path="res://scenes/door.tscn" id="6_gmk5p"]
+[ext_resource type="PackedScene" uid="uid://cg2v3maimdlql" path="res://scenes/door.tscn" id="6_gmk5p"]
 [ext_resource type="Texture2D" uid="uid://dsakqp0yqxlhr" path="res://assets/pictures/air-conditioner-12.png" id="6_jawcq"]
 [ext_resource type="AudioStream" uid="uid://bdk2nlm4xdlwt" path="res://audio/environment/electronics/379753__microsoftsam__ac_highfreq.wav" id="7_x8vk4"]
 [ext_resource type="AudioStream" uid="uid://cd888gd7aqv5x" path="res://audio/environment/electronics/572553__zach_ramirez__thermostat-air-conditioner-part-2-wav.wav" id="8_qf81h"]

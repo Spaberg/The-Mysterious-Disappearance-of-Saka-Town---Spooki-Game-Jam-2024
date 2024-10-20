@@ -18,6 +18,7 @@ var testspawnposition = Vector2(-1072,-637)
 func _ready() -> void:
 	get_parent().position = Vector2(-4971,128)
 	Global.teleported.connect(_on_teleported)
+	
 
 func _physics_process(delta: float) -> void:
 	var direction : float = Input.get_axis("Move Left","Move Right")
