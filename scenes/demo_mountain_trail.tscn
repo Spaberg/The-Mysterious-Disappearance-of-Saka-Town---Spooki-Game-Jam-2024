@@ -100,7 +100,7 @@ autostart = true
 [node name="Interaction point" parent="." instance=ExtResource("4_vg7hw")]
 position = Vector2(1577, 520)
 scale = Vector2(6, 6)
-text = "S… Forestry Sc…l, 4 km west. -><- Lake Oku-tone, 22 km southeast."
+text = "S… Forestry Sc…l, 4 km west. ->[p align=center]<- Lake Oku-tone, 22 km southeast."
 picture = ExtResource("13_sx55x")
 
 [connection signal="timeout" from="Bushes/Timer" to="Bushes" method="_on_timer_timeout"]
