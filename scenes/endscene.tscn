@@ -11,13 +11,11 @@ script = ExtResource("1_hhg4c")
 visible = false
 position = Vector2(292.333, 147.333)
 rotation = -0.536766
-scale = Vector2(1, 1)
 
 [node name="AnimatedSprite2D11" parent="." instance=ExtResource("2_hisfg")]
 visible = false
 position = Vector2(116.333, 11)
 rotation = -0.380477
-scale = Vector2(1, 1)
 
 [node name="AnimatedSprite2D7" parent="." instance=ExtResource("2_hisfg")]
 visible = false
@@ -53,7 +51,6 @@ scale = Vector2(1.6414, 1.0218)
 visible = false
 position = Vector2(242.167, 25.6667)
 rotation = 0.452376
-scale = Vector2(1, 1)
 
 [node name="AnimatedSprite2D" parent="." instance=ExtResource("2_hisfg")]
 visible = false
