@@ -94,7 +94,6 @@ position = Vector2(-233, -24)
 
 [node name="Door" parent="." instance=ExtResource("4_ako47")]
 position = Vector2(-132, -7)
-is_disabled = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Door"]
 stream = ExtResource("5_x7kjg")
