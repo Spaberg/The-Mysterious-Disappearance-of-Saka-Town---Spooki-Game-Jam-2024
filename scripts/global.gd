@@ -3,12 +3,13 @@ extends Node2D
 var radio_pct : float = 0
 var radio_has_been_triggered : bool = false
 
-enum DESTINATION {MountainTrailStart = 0, MountainTrailEnd, HospitalEntrance, CorridorEntrance}
+enum DESTINATION {MountainTrailStart = 0, MountainTrailEnd, HospitalEntrance, CorridorEntrance,RadioRoomEntrance}
 var pausing :bool=false
 var destination_coordinates = {
 	DESTINATION.HospitalEntrance: Vector2(-1809,1221),
 	DESTINATION.MountainTrailStart: Vector2(24,66),
 	DESTINATION.CorridorEntrance: Vector2(-1879,-440),
+	DESTINATION.RadioRoomEntrance: Vector2(),
 }
 
 signal radio_triggered
