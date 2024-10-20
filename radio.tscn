@@ -29,10 +29,10 @@ scale = Vector2(2, 2)
 
 [node name="HSlider" type="HSlider" parent="Control"]
 layout_mode = 0
-offset_left = 411.5
-offset_top = 308.0
-offset_right = 608.5
-offset_bottom = 341.0
+offset_left = 409.5
+offset_top = 309.0
+offset_right = 606.5
+offset_bottom = 339.0
 mouse_default_cursor_shape = 2
 theme_override_icons/grabber = ExtResource("2_yx2xg")
 theme_override_icons/grabber_highlight = ExtResource("2_yx2xg")

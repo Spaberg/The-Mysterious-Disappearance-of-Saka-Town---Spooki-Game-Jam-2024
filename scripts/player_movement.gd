@@ -9,7 +9,7 @@ var player_state : State = State.STANDING
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
 
 
-const run_speed := 25.0*6*6
+const run_speed := 25.0*6
 
 var gravity := ProjectSettings.get("physics/2d/default_gravity") as float
 var normalspawnposition = Vector2(-1566,178)
