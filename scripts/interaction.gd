@@ -5,7 +5,7 @@ var poster_scene = preload("res://scenes/poster.tscn")
 @export var text : String
 @export var picture : CompressedTexture2D
 var poster_instance
-var consumed
+var consumed = false
 var toggle_question_mark_on_hide = true
 
 # Called when the node enters the scene tree for the first time.

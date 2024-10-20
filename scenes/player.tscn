@@ -121,11 +121,12 @@ script = ExtResource("1_ok1q6")
 
 [node name="QuestionMark" type="RichTextLabel" parent="CharacterBody2D"]
 visible = false
-offset_left = -16.0
-offset_top = -49.0
-offset_right = 24.0
-offset_bottom = -9.0
+offset_left = -14.0
+offset_top = -208.0
+offset_right = 29.0
+offset_bottom = -155.0
 theme_override_fonts/normal_font = ExtResource("2_rjx81")
+theme_override_font_sizes/normal_font_size = 50
 bbcode_enabled = true
 text = "[center]?[/center]"
 
