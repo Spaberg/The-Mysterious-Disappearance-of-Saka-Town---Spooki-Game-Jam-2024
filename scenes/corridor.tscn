@@ -181,6 +181,7 @@ animation = &"moving"
 frame = 10
 frame_progress = 1.0
 
+
 [node name="longer corridor" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(1121, 89)
