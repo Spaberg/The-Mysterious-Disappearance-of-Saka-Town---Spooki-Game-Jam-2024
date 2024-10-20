@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cevgkc45x7x86" path="res://assets/levels/forest_foreground.png" id="1_fqg5l"]
 [ext_resource type="Texture2D" uid="uid://dykqiai342mw6" path="res://assets/levels/forest_background.png" id="1_vvnpt"]
-[ext_resource type="PackedScene" uid="uid://cg2v3maimdlql" path="res://scenes/door.tscn" id="3_o86my"]
+[ext_resource type="PackedScene" path="res://scenes/door.tscn" id="3_o86my"]
 [ext_resource type="AudioStream" uid="uid://bjx1gvgstbaf7" path="res://audio/environment/electronics/zapsplat_nature_wind_strong_constant_around_mountains_97997.mp3" id="4_4fx5q"]
 [ext_resource type="PackedScene" uid="uid://ck7pd6crsnpfc" path="res://scenes/interaction_point.tscn" id="4_vg7hw"]
 [ext_resource type="AudioStream" uid="uid://cabego4pciah" path="res://audio/environment/life/higurashi-cry1.mp3" id="5_6pwka"]
@@ -77,7 +77,6 @@ position = Vector2(477, -4)
 stream = ExtResource("14_vsl4y")
 volume_db = -13.0
 max_distance = 2160.0
-bus = &"Crows"
 script = ExtResource("15_rl1cn")
 
 [node name="Timer" type="Timer" parent="Crows"]
