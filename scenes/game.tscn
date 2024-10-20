@@ -1,8 +1,5 @@
+[gd_scene load_steps=6 format=3 uid="uid://bv8r37oq4vldh"]
 
-[gd_scene load_steps=9 format=3 uid="uid://bv8r37oq4vldh"]
-
-
-[ext_resource type="PackedScene" uid="uid://c521td2cttlo" path="res://scenes/mountain_trail.tscn" id="1_1u3nf"]
 [ext_resource type="Script" path="res://scenes/camera.gd" id="5_cw1dd"]
 [ext_resource type="PackedScene" uid="uid://cys0crrbgelf4" path="res://scenes/demo_mountain_trail.tscn" id="6_bk4nu"]
 [ext_resource type="PackedScene" uid="uid://c0am8jbn7wvkl" path="res://scenes/hospital_outside.tscn" id="6_qonim"]
@@ -10,22 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://bkwnia2jy6pov" path="res://scenes/radioroom.tscn" id="8_5f5v6"]
 
 [node name="game" type="Node"]
-
-[node name="mountain trail" parent="." instance=ExtResource("1_1u3nf")]
-
-[node name="HighFreqACSound" parent="mountain trail/AC" index="0"]
-autoplay = false
-
-[node name="WideFreqACSound" parent="mountain trail/AC" index="1"]
-autoplay = false
-
-[node name="RadioVoices" parent="mountain trail/Radio" index="0"]
-volume_db = -80.0
-autoplay = false
-
-[node name="RadioVoiceAndNoise" parent="mountain trail/Radio" index="1"]
-volume_db = -80.0
-autoplay = false
 
 [node name="hospital_outside" parent="." instance=ExtResource("6_qonim")]
 position = Vector2(7098, 1108)
@@ -70,5 +51,3 @@ position = Vector2(-6349, -2212)
 color = Color(0.0823529, 0.52549, 0.94902, 1)
 energy = 0.5
 blend_mode = 1
-
-[editable path="mountain trail"]

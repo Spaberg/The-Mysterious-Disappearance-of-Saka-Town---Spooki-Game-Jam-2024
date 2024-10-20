@@ -9,7 +9,7 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_timer_timeout() -> void:
-	if(Player.global_position.distance_to(global_position) > 85 or (Player.global_position.distance_to(global_position) > 50 and Player.find_child("Sprite").flip_h	)):
+	if(Player.global_position.distance_to(global_position) > 85*6 or (Player.global_position.distance_to(global_position) > 50*6 and Player.find_child("Sprite").flip_h)):
 		play()
 	$Timer.wait_time = 6 + randf() * 9
 	$Timer.start()

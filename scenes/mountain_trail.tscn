@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://scripts/flickering_light.gd" id="4_b1qmy"]
 [ext_resource type="Texture2D" uid="uid://crydpx3ox22ur" path="res://assets/textures/256x256 textures (9).png" id="4_x3lah"]
 [ext_resource type="AudioStream" uid="uid://dyrbhc55qjn8q" path="res://audio/environment/electronics/380660__arseniiv__fluorescent-lamp-flickering.wav" id="5_irxq3"]
-[ext_resource type="PackedScene" path="res://scenes/door.tscn" id="6_gmk5p"]
+[ext_resource type="PackedScene" uid="uid://cg2v3maimdlql" path="res://scenes/door.tscn" id="6_gmk5p"]
 [ext_resource type="Texture2D" uid="uid://dsakqp0yqxlhr" path="res://assets/pictures/air-conditioner-12.png" id="6_jawcq"]
 [ext_resource type="AudioStream" uid="uid://bdk2nlm4xdlwt" path="res://audio/environment/electronics/379753__microsoftsam__ac_highfreq.wav" id="7_x8vk4"]
 [ext_resource type="AudioStream" uid="uid://cd888gd7aqv5x" path="res://audio/environment/electronics/572553__zach_ramirez__thermostat-air-conditioner-part-2-wav.wav" id="8_qf81h"]
@@ -63,7 +63,7 @@ position = Vector2(-3860, -860)
 scale = Vector2(20, 20)
 stream = ExtResource("5_irxq3")
 autoplay = true
-max_distance = 360.0
+max_distance = 2160.0
 
 [node name="AC" type="Sprite2D" parent="."]
 position = Vector2(266, 84)
@@ -73,12 +73,12 @@ texture = ExtResource("6_jawcq")
 [node name="HighFreqACSound" type="AudioStreamPlayer2D" parent="AC"]
 stream = ExtResource("7_x8vk4")
 autoplay = true
-max_distance = 360.0
+max_distance = 2160.0
 
 [node name="WideFreqACSound" type="AudioStreamPlayer2D" parent="AC"]
 stream = ExtResource("8_qf81h")
 autoplay = true
-max_distance = 360.0
+max_distance = 2160.0
 
 [node name="Radio" type="Sprite2D" parent="."]
 position = Vector2(6, 41)
@@ -89,13 +89,13 @@ script = ExtResource("11_qibay")
 [node name="RadioVoices" type="AudioStreamPlayer2D" parent="Radio"]
 stream = ExtResource("11_532pj")
 autoplay = true
-max_distance = 360.0
+max_distance = 2160.0
 
 [node name="RadioVoiceAndNoise" type="AudioStreamPlayer2D" parent="Radio"]
 stream = ExtResource("12_3cim4")
 volume_db = -15.0
 autoplay = true
-max_distance = 360.0
+max_distance = 2160.0
 
 [node name="Door" parent="." instance=ExtResource("6_gmk5p")]
 position = Vector2(-8, -19)

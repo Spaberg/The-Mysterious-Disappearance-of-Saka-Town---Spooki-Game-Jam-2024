@@ -59,10 +59,10 @@ panning_strength = 0.5
 bus = &"MountainTrail"
 
 [node name="Bushes" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(1269, 404)
+position = Vector2(4240, 1175)
 stream = ExtResource("12_1ndtv")
 volume_db = -1.0
-max_distance = 720.0
+max_distance = 4320.0
 panning_strength = 1.2
 bus = &"MountainTrail"
 script = ExtResource("13_kkya3")
@@ -76,7 +76,7 @@ autostart = true
 position = Vector2(477, -4)
 stream = ExtResource("14_vsl4y")
 volume_db = -13.0
-max_distance = 360.0
+max_distance = 2160.0
 bus = &"Crows"
 script = ExtResource("15_rl1cn")
 

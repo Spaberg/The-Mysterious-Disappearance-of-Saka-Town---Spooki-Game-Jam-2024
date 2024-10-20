@@ -1,5 +1,7 @@
 extends Node2D
 
+var resolution_scale : int = 6
+
 var radio_pct : float = 0
 var radio_has_been_triggered : bool = false
 
