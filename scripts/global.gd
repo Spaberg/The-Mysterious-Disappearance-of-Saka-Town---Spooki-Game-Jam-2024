@@ -52,10 +52,10 @@ func set_radio_pct(value):
 	radio_pct = value
 	if not radio_has_been_triggered:
 		print(radio_pct)
-	if radio_pct > 0.8:
+	if radio_pct > 0.7:
 		if $RadioTrigger.is_stopped():
 			$RadioTrigger.start()
-	if radio_pct < 0.8:
+	if radio_pct < 0.7:
 		$RadioTrigger.stop()
 		
 func _on_radio_timeout():

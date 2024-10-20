@@ -9,6 +9,7 @@ func _process(_delta):
 
 func _on_radio_triggered():
 	await get_tree().create_timer(7).timeout
+	$RadioVoices.volume_db = lerp(-80, 0, Global.radio_pct)
 	$RadioVoices.stream = emergency_broadcast
 	$RadioVoices.play()
 	
