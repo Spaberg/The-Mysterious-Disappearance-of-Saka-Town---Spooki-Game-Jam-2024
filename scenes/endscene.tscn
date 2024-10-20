@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://deotlas1gofd8"]
+[gd_scene load_steps=4 format=3 uid="uid://deotlas1gofd8"]
 
 [ext_resource type="Script" path="res://scenes/endscene.gd" id="1_hhg4c"]
 [ext_resource type="PackedScene" uid="uid://cmo6koiyukaqo" path="res://scenes/end_eye.tscn" id="2_hisfg"]
+[ext_resource type="AudioStream" uid="uid://bpjxhmupjt6hi" path="res://audio/environment/radio/ending_sound.ogg" id="3_mvchs"]
 
 [node name="Endscene" type="Node2D"]
 scale = Vector2(6, 6)
@@ -68,4 +69,5 @@ visible = false
 position = Vector2(246.667, 102.167)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_mvchs")
 autoplay = true

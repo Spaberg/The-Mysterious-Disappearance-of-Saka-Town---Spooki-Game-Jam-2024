@@ -50,8 +50,7 @@ func start_slideshow() -> void:
 	slideshow.visible = false
 	await get_tree().create_timer(3).timeout
 	Player.get_child(0).velocity = Vector2.ZERO
-	get_tree().change_scene_to_packed(main_scene)
-	
+	get_tree().change_scene_to_packed(main_scene)	
 	
 
 func make_text_array(text : String):
