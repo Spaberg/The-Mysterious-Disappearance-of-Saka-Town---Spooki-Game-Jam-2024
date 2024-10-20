@@ -17,4 +17,5 @@ func _on_audio_finished():
 	print("finish")
 	$Sprite2D/TubeLight.visible = true
 	$Sprite2D/LightOccluder2D.visible = true
+	$Sprite2D/closed_door.visible = false
 	# $Sprite2D/brightlight.color = Color(0,0,0.55,1)

@@ -109,6 +109,9 @@ texture = ExtResource("2_3nrvw")
 position = Vector2(161, 89)
 texture = ExtResource("3_dye48")
 
+[node name="closed_door" type="Sprite2D" parent="Sprite2D"]
+texture = ExtResource("20_g1ggx")
+
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
 position = Vector2(-1, -3)
 
@@ -191,16 +194,12 @@ position = Vector2(161, 89)
 scale = Vector2(1, 1.04)
 sprite_frames = SubResource("SpriteFrames_62yg0")
 animation = &"open"
-frame_progress = 0.241648
+frame_progress = 0.398872
 
 [node name="longer corridor" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(1121, 89)
 scale = Vector2(-2, 1)
 texture = ExtResource("3_dye48")
-
-[node name="closed_door" type="Sprite2D" parent="."]
-position = Vector2(161, 89)
-texture = ExtResource("20_g1ggx")
 
 [connection signal="finished" from="Door/AudioStreamPlayer2D" to="." method="_on_audio_finished"]
