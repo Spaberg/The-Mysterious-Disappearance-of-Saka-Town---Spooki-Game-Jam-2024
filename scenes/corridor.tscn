@@ -41,14 +41,6 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("14_3r4eu")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("14_3r4eu")
 }, {
 "duration": 1.0,
 "texture": ExtResource("15_o10p1")
@@ -80,17 +72,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("24_snuuv")
 }],
-"loop": true,
+"loop": false,
 "name": &"moving",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("23_6r8m2")
-}],
-"loop": true,
-"name": &"open",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [node name="Corridor" type="Node2D"]
@@ -193,7 +177,10 @@ max_distance = 2160.0
 position = Vector2(161, 89)
 scale = Vector2(1, 1.04)
 sprite_frames = SubResource("SpriteFrames_62yg0")
-animation = &"idle"
+animation = &"moving"
+frame = 10
+frame_progress = 1.0
+
 
 [node name="longer corridor" type="Sprite2D" parent="."]
 z_index = -1
