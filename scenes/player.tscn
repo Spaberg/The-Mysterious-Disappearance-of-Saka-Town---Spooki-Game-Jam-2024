@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dsqj6xg8dlyij"]
+[gd_scene load_steps=26 format=3 uid="uid://dsqj6xg8dlyij"]
 
 [ext_resource type="Script" path="res://scripts/player_movement.gd" id="1_ok1q6"]
 [ext_resource type="Texture2D" uid="uid://bru33sl6hul2t" path="res://assets/player/default.png" id="2_0c733"]
@@ -20,6 +20,8 @@
 [ext_resource type="Texture2D" uid="uid://cnj6scslhi5d6" path="res://assets/player/walk6.png" id="19_nc35i"]
 [ext_resource type="Texture2D" uid="uid://ch3jhfpbvvhvf" path="res://assets/player/walk7.png" id="20_tb8ax"]
 [ext_resource type="Texture2D" uid="uid://b0i7xygjqfam7" path="res://assets/player/walk8.png" id="21_4xqce"]
+[ext_resource type="AudioStream" uid="uid://cphgosiy0oe4i" path="res://audio/environment/life/RightForestFootstep.ogg" id="21_fh857"]
+[ext_resource type="AudioStream" uid="uid://bu6n4bi552tlx" path="res://audio/environment/life/LeftForestFootstep.ogg" id="22_rvgqu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_64o7j"]
 radius = 138.0
@@ -134,6 +136,17 @@ animation = &"walk"
 [node name="#AudioListener2D" type="AudioListener2D" parent="."]
 current = true
 
+[node name="RightForestFootstep" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("21_fh857")
+volume_db = -5.0
+panning_strength = 0.0
+
+[node name="LeftForestFootstep" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("22_rvgqu")
+volume_db = -5.0
+panning_strength = 0.0
+
 [connection signal="input_event" from="CharacterBody2D" to="CharacterBody2D" method="_on_input_event"]
 [connection signal="animation_finished" from="CharacterBody2D/Sprite" to="CharacterBody2D" method="_on_sprite_animation_finished"]
 [connection signal="animation_looped" from="CharacterBody2D/Sprite" to="CharacterBody2D" method="_on_sprite_animation_looped"]
+[connection signal="frame_changed" from="CharacterBody2D/Sprite" to="CharacterBody2D" method="_on_sprite_frame_changed"]
