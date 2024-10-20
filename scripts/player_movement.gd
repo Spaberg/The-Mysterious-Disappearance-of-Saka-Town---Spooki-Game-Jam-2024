@@ -64,13 +64,8 @@ func _on_sprite_animation_looped() -> void:
 		else:
 			sprite.flip_h = true
 		player_state = State.STANDING
-
-<<<<<<< HEAD
-func _on_sprite_animation_finished() -> void:
-=======
-
+		
 func _on_sprite_animation_finished() -> void:	
->>>>>>> d5c66ee7bbcb4be7a4eea50392719f3bff0a8cec
 	if player_state == State.LOOKING and sprite.frame == 0:
 		sprite.play("default")
 		player_state = State.STANDING
@@ -78,15 +73,12 @@ func _on_sprite_animation_finished() -> void:
 func _input(event):
 	if event.is_action_released("Move Up") and player_state == State.LOOKING:
 		sprite.play_backwards("turn")
-<<<<<<< HEAD
 		
 func toggle_question_mark():
 	$QuestionMark.visible = not $QuestionMark.visible
-=======
 
 func _on_sprite_frame_changed() -> void:
 	if(sprite.frame == 2):
 		get_parent().find_child("RightForestFootstep").play()
 	elif(sprite.frame == 6):
 		get_parent().find_child("LeftForestFootstep").play()
->>>>>>> d5c66ee7bbcb4be7a4eea50392719f3bff0a8cec
