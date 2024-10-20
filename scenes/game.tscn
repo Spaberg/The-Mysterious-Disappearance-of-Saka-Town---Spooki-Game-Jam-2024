@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cys0crrbgelf4" path="res://scenes/demo_mountain_trail.tscn" id="6_bk4nu"]
 [ext_resource type="PackedScene" uid="uid://c0am8jbn7wvkl" path="res://scenes/hospital_outside.tscn" id="6_qonim"]
 [ext_resource type="PackedScene" uid="uid://c3n77sjqh0ebj" path="res://scenes/corridor.tscn" id="7_c2f50"]
-[ext_resource type="PackedScene" uid="uid://bkwnia2jy6pov" path="res://scenes/radioroom.tscn" id="8_5f5v6"]
+[ext_resource type="PackedScene" uid="uid://cre5nt2fstdw" path="res://scenes/radioroom.tscn" id="8_5f5v6"]
 
 [node name="game" type="Node"]
 
@@ -20,7 +20,8 @@ position = Vector2(-1904, -9549)
 scale = Vector2(6, 6)
 
 [node name="RadioRoom" parent="." instance=ExtResource("8_5f5v6")]
-position = Vector2(-1993, 1566)
+position = Vector2(-1993, 7566)
+scale = Vector2(6, 6)
 
 [node name="Teleport Positions" type="Node" parent="."]
 
@@ -34,17 +35,17 @@ position = Vector2(2341, 1397)
 position = Vector2(-1722, -8808)
 
 [node name="RadioRoomEntrance" type="Marker2D" parent="Teleport Positions"]
-position = Vector2(-1725, 1664)
+position = Vector2(-435, 8197)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 visibility_layer = 3
-position = Vector2(-1736, 288)
-limit_left = -1900
+position = Vector2(-4970, -57)
+limit_left = -6159
 editor_draw_limits = true
 script = ExtResource("5_cw1dd")
 
 [node name="PlayerPosition" type="Marker2D" parent="."]
-position = Vector2(-1153, 389)
+position = Vector2(-4971, 184)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 position = Vector2(-6349, -2212)

@@ -29,7 +29,6 @@ func _process(delta: float) -> void:
 func _on_add_poster(scene_instance):
 	add_child(scene_instance)
 	poster_scene = scene_instance
-	poster_scene.position = Vector2(0,0)
 	
 func _on_remove_poster():
 	poster_scene.queue_free()
