@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://c3n77sjqh0ebj"]
+[gd_scene load_steps=25 format=3 uid="uid://c3n77sjqh0ebj"]
 
 [ext_resource type="Script" path="res://scripts/corridoreffects.gd" id="1_fmgto"]
 [ext_resource type="Texture2D" uid="uid://dv4gjbn2pknyk" path="res://assets/textures/256x256_textures_101.png" id="2_3nrvw"]
@@ -8,11 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://cg2v3maimdlql" path="res://scenes/door.tscn" id="4_ako47"]
 [ext_resource type="AudioStream" uid="uid://dyrbhc55qjn8q" path="res://audio/environment/electronics/380660__arseniiv__fluorescent-lamp-flickering.wav" id="5_ba14d"]
 [ext_resource type="AudioStream" uid="uid://x1c06wbuq0v8" path="res://audio/environment/life/371314__freemaster2__creepy-chorus-of-crows.wav" id="5_x7kjg"]
-[ext_resource type="Texture2D" uid="uid://bj1sbe7io76y4" path="res://assets/pictures/vintage-radio.png" id="5_xc0s1"]
-[ext_resource type="Script" path="res://scenes/radio_player.gd" id="6_575gq"]
-[ext_resource type="PackedScene" uid="uid://ck7pd6crsnpfc" path="res://scenes/interaction_point.tscn" id="7_yhcgu"]
-[ext_resource type="AudioStream" uid="uid://cr3th5umfo3ao" path="res://audio/environment/electronics/626963__klankbeeld__vlissingen-coast-area-marine-radio-nl-220221.ogg" id="9_orufr"]
-[ext_resource type="AudioStream" uid="uid://2hphcsfw7xeu" path="res://audio/environment/electronics/257879__zmobie__short-wave-radio-noise-2.wav" id="10_dmoh1"]
 [ext_resource type="Texture2D" uid="uid://bwfyh8hy5sawd" path="res://assets/pictures/corridor_sliding_door1.png" id="14_3r4eu"]
 [ext_resource type="Texture2D" uid="uid://b7iqofxayv383" path="res://assets/pictures/corridor_sliding_door2.png" id="15_o10p1"]
 [ext_resource type="Texture2D" uid="uid://cshkkuxaq7mal" path="res://assets/pictures/corridor_sliding_door3.png" id="16_eblun"]
@@ -114,6 +109,7 @@ position = Vector2(161, 89)
 texture = ExtResource("3_tl8c2")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+position = Vector2(-37, -6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
 position = Vector2(-137, -21)
@@ -185,26 +181,6 @@ destination = 4
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Door"]
 stream = ExtResource("5_x7kjg")
-max_distance = 2160.0
-
-[node name="Radio" type="Sprite2D" parent="."]
-position = Vector2(263, 122)
-scale = Vector2(0.02, 0.02)
-texture = ExtResource("5_xc0s1")
-script = ExtResource("6_575gq")
-
-[node name="Interaction Point" parent="Radio" instance=ExtResource("7_yhcgu")]
-scale = Vector2(50, 50)
-
-[node name="RadioVoices" type="AudioStreamPlayer2D" parent="Radio"]
-stream = ExtResource("9_orufr")
-autoplay = true
-max_distance = 2160.0
-
-[node name="RadioVoiceAndNoise" type="AudioStreamPlayer2D" parent="Radio"]
-stream = ExtResource("10_dmoh1")
-volume_db = -15.0
-autoplay = true
 max_distance = 2160.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
