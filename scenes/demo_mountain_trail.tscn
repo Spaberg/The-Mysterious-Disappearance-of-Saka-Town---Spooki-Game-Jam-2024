@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://cabego4pciah" path="res://audio/environment/life/higurashi-cry1.mp3" id="5_6pwka"]
 [ext_resource type="AudioStream" uid="uid://dqobslbin14is" path="res://audio/environment/life/707979__kaylinschafer__sfxbushes-ext_rustling-through-bushes_kaylin_owsfx.wav" id="12_1ndtv"]
 [ext_resource type="Script" path="res://scenes/bushes.gd" id="13_kkya3"]
-[ext_resource type="Texture2D" uid="uid://dp0b18y3a16os" path="res://assets/pictures/radio.png" id="13_sx55x"]
+[ext_resource type="Texture2D" uid="uid://c2dl6wdyigat" path="res://assets/pictures/forest_sign.png" id="13_kmb45"]
 [ext_resource type="AudioStream" uid="uid://x1c06wbuq0v8" path="res://audio/environment/life/371314__freemaster2__creepy-chorus-of-crows.wav" id="14_vsl4y"]
 [ext_resource type="Script" path="res://scenes/crows.gd" id="15_rl1cn"]
 [ext_resource type="AudioStream" uid="uid://d2m5aaurxi5wu" path="res://audio/environment/electronics/zapsplat_horror_airy_wind_swell_ghostly_chilling_cold_107861.mp3" id="16_vvyr8"]
@@ -101,7 +101,7 @@ autostart = true
 position = Vector2(1577, 520)
 scale = Vector2(6, 6)
 text = "S… Forestry Sc…l, 4 km west. ->[p align=center]<- Lake Oku-tone, 22 km southeast."
-picture = ExtResource("13_sx55x")
+picture = ExtResource("13_kmb45")
 
 [connection signal="timeout" from="Bushes/Timer" to="Bushes" method="_on_timer_timeout"]
 [connection signal="timeout" from="Crows/Timer" to="Crows" method="_on_timer_timeout"]
