@@ -7,7 +7,6 @@ enum State {WALKING, STANDING, LOOKING, TURNING}
 var player_state : State = State.STANDING
 
 
-
 const run_speed := 25.0*6*6
 
 var gravity := ProjectSettings.get("physics/2d/default_gravity") as float
@@ -66,8 +65,7 @@ func _on_sprite_animation_looped() -> void:
 		else:
 			sprite.flip_h = true
 		player_state = State.STANDING
-
-
+		
 func _on_sprite_animation_finished() -> void:	
 	if player_state == State.LOOKING and sprite.frame == 0:
 		sprite.play("default")
@@ -76,6 +74,9 @@ func _on_sprite_animation_finished() -> void:
 func _input(event):
 	if event.is_action_released("Move Up") and player_state == State.LOOKING:
 		sprite.play_backwards("turn")
+		
+func toggle_question_mark():
+	$QuestionMark.visible = not $QuestionMark.visible
 
 func _on_sprite_frame_changed() -> void:
 	if(sprite.frame == 2):

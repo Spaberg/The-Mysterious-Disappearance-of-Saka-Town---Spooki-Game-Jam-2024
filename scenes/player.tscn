@@ -1,7 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://dsqj6xg8dlyij"]
+[gd_scene load_steps=27 format=3 uid="uid://dsqj6xg8dlyij"]
 
 [ext_resource type="Script" path="res://scripts/player_movement.gd" id="1_ok1q6"]
 [ext_resource type="Texture2D" uid="uid://bru33sl6hul2t" path="res://assets/player/default.png" id="2_0c733"]
+[ext_resource type="FontFile" uid="uid://bxt3gt7ljffnm" path="res://fonts/return-of-ganon/retganon.ttf" id="2_rjx81"]
 [ext_resource type="Texture2D" uid="uid://bipky626x8vp6" path="res://assets/player/spin1.png" id="3_bsc65"]
 [ext_resource type="Texture2D" uid="uid://nbhubk34ik1j" path="res://assets/player/spin2.png" id="4_msp40"]
 [ext_resource type="Texture2D" uid="uid://bn5dwf724whhw" path="res://assets/player/spin3.png" id="5_wtpnf"]
@@ -118,6 +119,17 @@ texture_filter = 1
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("1_ok1q6")
 
+[node name="QuestionMark" type="RichTextLabel" parent="CharacterBody2D"]
+visible = false
+offset_left = -14.0
+offset_top = -208.0
+offset_right = 29.0
+offset_bottom = -155.0
+theme_override_fonts/normal_font = ExtResource("2_rjx81")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[center]?[/center]"
+
 [node name="Area2D" type="Area2D" parent="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
@@ -132,6 +144,7 @@ shape = SubResource("CapsuleShape2D_s6veh")
 scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_47c53")
 animation = &"walk"
+frame_progress = 0.873664
 
 [node name="#AudioListener2D" type="AudioListener2D" parent="."]
 current = true

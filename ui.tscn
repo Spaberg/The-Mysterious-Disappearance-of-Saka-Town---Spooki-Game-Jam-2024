@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://dj0y5eb5w24e1"]
+
+[ext_resource type="Script" path="res://ui.gd" id="1_b5ntj"]
+[ext_resource type="FontFile" uid="uid://bxt3gt7ljffnm" path="res://fonts/return-of-ganon/retganon.ttf" id="2_xvjin"]
+
+[node name="UI" type="Node2D"]
+script = ExtResource("1_b5ntj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+z_index = 1
+texture_filter = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -610.0
+offset_top = -164.0
+offset_right = 616.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("2_xvjin")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[center]Press A and D to walk[/center]"
+fit_content = true

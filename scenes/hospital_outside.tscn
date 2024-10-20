@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c0am8jbn7wvkl"]
+[gd_scene load_steps=8 format=3 uid="uid://c0am8jbn7wvkl"]
 
 [ext_resource type="Texture2D" uid="uid://bvyclu24erwcf" path="res://assets/levels/hospital_outside2.png" id="1_er6jt"]
-[ext_resource type="PackedScene" path="res://scenes/door.tscn" id="2_oyfxs"]
+[ext_resource type="PackedScene" uid="uid://cg2v3maimdlql" path="res://scenes/door.tscn" id="2_oyfxs"]
+[ext_resource type="PackedScene" uid="uid://ck7pd6crsnpfc" path="res://scenes/interaction_point.tscn" id="3_7sm6l"]
+[ext_resource type="Texture2D" uid="uid://c2y7awhq7a7v6" path="res://assets/pictures/board_poster.png" id="4_p6yaa"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_83xnc"]
 a = Vector2(-462, -87)
@@ -18,7 +20,6 @@ b = Vector2(436, -95)
 [node name="hospital_outside" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-
 light_mask = 2
 position = Vector2(522, 89)
 texture = ExtResource("1_er6jt")
@@ -39,3 +40,8 @@ shape = SubResource("SegmentShape2D_bu0sw")
 [node name="Door" parent="." instance=ExtResource("2_oyfxs")]
 position = Vector2(411, -12)
 destination = 3
+
+[node name="Interaction point" parent="." instance=ExtResource("3_7sm6l")]
+position = Vector2(436, 111)
+text = "A neighborhood association bulletin board. The ink is bleached and weathered.  Part of the title can be made out. “The radio is our ears!!!”Two words have been strongly underlined with a pencil „MANDATORY TRAINING.”"
+picture = ExtResource("4_p6yaa")
