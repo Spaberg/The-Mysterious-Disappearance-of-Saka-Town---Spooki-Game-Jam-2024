@@ -7,7 +7,7 @@ enum State {WALKING, STANDING, LOOKING, TURNING}
 var player_state : State = State.STANDING
 
 
-const run_speed := 30.0
+const run_speed := 330.0
 var gravity := ProjectSettings.get("physics/2d/default_gravity") as float
 var normalspawnposition = Vector2(-1566,178)
 var testspawnposition = Vector2(-1072,-637)
