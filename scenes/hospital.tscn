@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://hbrn6nekpwwm"]
 
-[ext_resource type="Texture2D" uid="uid://cofei2sb78v2v" path="res://assets/pictures/level_crossing.png" id="1_ldlkf"]
+[ext_resource type="Texture2D" uid="uid://cofei2sb78v2v" path="res://assets/levels/level_crossing.png" id="1_ldlkf"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_38pkl"]
 a = Vector2(-161, 70)

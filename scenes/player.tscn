@@ -144,6 +144,7 @@ shape = SubResource("CapsuleShape2D_s6veh")
 scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_47c53")
 animation = &"walk"
+frame_progress = 0.873664
 
 [node name="#AudioListener2D" type="AudioListener2D" parent="."]
 current = true
