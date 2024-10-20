@@ -20,14 +20,6 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_l1tm0")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_l1tm0")
 }, {
 "duration": 1.0,
 "texture": ExtResource("2_ah7d6")
@@ -47,16 +39,8 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("7_6b008")
 }],
-"loop": true,
+"loop": false,
 "name": &"open",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_6b008")
-}],
-"loop": true,
-"name": &"opened",
 "speed": 5.0
 }]
 
@@ -79,8 +63,8 @@ z_index = 2
 texture_filter = 1
 position = Vector2(193, 87)
 sprite_frames = SubResource("SpriteFrames_ldk7w")
-animation = &"idle"
-frame_progress = 0.713144
+animation = &"open"
+frame = 6
 
 [node name="Radio" type="Node2D" parent="."]
 z_index = 2

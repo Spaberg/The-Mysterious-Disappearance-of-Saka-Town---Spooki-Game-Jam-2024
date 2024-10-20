@@ -26,6 +26,7 @@ signal player_reached_door
 signal player_used_door
 signal player_walked_away_from_poster
 signal player_walked_away_from_door
+signal sliding_door_triggered
 
 func display_poster(scene_instance):
 	pausing = true
