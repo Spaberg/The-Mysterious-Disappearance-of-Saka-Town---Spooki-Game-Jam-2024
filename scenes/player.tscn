@@ -183,11 +183,7 @@ shape = SubResource("CapsuleShape2D_s6veh")
 [node name="Sprite" type="AnimatedSprite2D" parent="CharacterBody2D"]
 scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_47c53")
-
-animation = &"walk"
-
 animation = &"turn"
-
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
 libraries = {

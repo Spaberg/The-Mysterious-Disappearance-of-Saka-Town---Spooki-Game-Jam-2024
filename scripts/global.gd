@@ -15,6 +15,8 @@ var destination_coordinates = {
 	DESTINATION.RadioRoomOut: Vector2(-3259,14421),
 }
 
+# Is this essentially just signal processing?
+
 signal radio_triggered
 
 signal teleported
@@ -27,6 +29,7 @@ signal player_used_door
 signal player_walked_away_from_poster
 signal player_walked_away_from_door
 signal sliding_door_triggered
+signal radio_finished
 
 func display_poster(scene_instance):
 	pausing = true
@@ -50,10 +53,10 @@ func set_radio_pct(value):
 	radio_pct = value
 	if not radio_has_been_triggered:
 		print(radio_pct)
-	if radio_pct > 0.8:
+	if radio_pct > 0.7:
 		if $RadioTrigger.is_stopped():
 			$RadioTrigger.start()
-	if radio_pct < 0.8:
+	if radio_pct < 0.7:
 		$RadioTrigger.stop()
 		
 func _on_radio_timeout():
