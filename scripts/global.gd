@@ -4,6 +4,7 @@ var resolution_scale : int = 6
 
 var radio_pct : float = 0
 var radio_has_been_triggered : bool = false
+var radio_is_finished : bool = false
 var player_is_entering_door : bool = false
 
 enum DESTINATION {MountainTrailStart = 0, MountainTrailEnd, HospitalEntrance, CorridorEntrance,RadioRoomEntrance,RadioRoomOut}
@@ -41,7 +42,7 @@ func hide_poster():
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	radio_triggered.connect(_on_radio_triggered)
-	pass # Replace with function body.
+	radio_finished.connect(_on_radio_finished)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -66,3 +67,6 @@ func _on_radio_triggered():
 	print("yeahhh!")
 	radio_has_been_triggered = true
 	pass
+
+func _on_radio_finished():
+	radio_is_finished = true

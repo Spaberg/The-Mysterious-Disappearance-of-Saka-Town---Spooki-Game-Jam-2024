@@ -1,10 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://bso3i1wwcdaal"]
 
-[ext_resource type="Script" path="res://scripts/global.gd" id="1_y2nqs"]
+[ext_resource type="Script" path="res://scripts/global.gd" id="1_rseyg"]
 
 [node name="Global" type="Node2D"]
 z_index = 5
-script = ExtResource("1_y2nqs")
+script = ExtResource("1_rseyg")
 
 [node name="RadioTrigger" type="Timer" parent="."]
 wait_time = 5.0

@@ -59,7 +59,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_teleported(destination):
 	global_position = Global.destination_coordinates[destination]
-	if destination == Global.DESTINATION.RadioRoomEntrance:
+	if destination == Global.DESTINATION.RadioRoomEntrance or destination == Global.DESTINATION.RadioRoomOut:
 		sprite.flip_h = true
 	else:
 		sprite.flip_h = false

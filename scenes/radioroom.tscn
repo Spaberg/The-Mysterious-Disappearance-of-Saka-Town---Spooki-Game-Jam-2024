@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cxhchagx4xmgw" path="res://assets/pictures/classroom_door_anim6.png" id="6_78c4s"]
 [ext_resource type="Texture2D" uid="uid://d1cukd11u8plu" path="res://assets/pictures/classroom_door_anim7.png" id="7_6b008"]
 [ext_resource type="PackedScene" uid="uid://cg2v3maimdlql" path="res://scenes/door.tscn" id="10_t4chm"]
-[ext_resource type="PackedScene" uid="uid://48erot7tt37k" path="res://radio_small.tscn" id="11_m8mip"]
+[ext_resource type="PackedScene" uid="uid://48erot7tt37k" path="res://scenes/radio_small.tscn" id="11_m8mip"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ldk7w"]
 animations = [{

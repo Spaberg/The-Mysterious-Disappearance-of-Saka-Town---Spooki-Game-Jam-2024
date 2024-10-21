@@ -1,7 +1,7 @@
 extends Node2D
 var is_collision : bool = false
 signal display_poster
-var poster_scene = preload("res://radio.tscn")
+var poster_scene = preload("res://scenes/radio.tscn")
 var poster_instance
 var consumed = false
 @export var enabled : bool

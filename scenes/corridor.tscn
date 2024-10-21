@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://ctt5msx7u8isi" path="res://assets/pictures/double_doors.png" id="20_g1ggx"]
 [ext_resource type="Texture2D" uid="uid://c4nj8wpnvqfse" path="res://assets/pictures/corridor_sliding_door7.png" id="20_vxol2"]
 [ext_resource type="Texture2D" uid="uid://b6a0bqdn6s4fm" path="res://assets/pictures/corridor_sliding_door8.png" id="21_yd3jc"]
-[ext_resource type="PackedScene" uid="uid://48erot7tt37k" path="res://radio_small.tscn" id="22_17k15"]
+[ext_resource type="PackedScene" uid="uid://48erot7tt37k" path="res://scenes/radio_small.tscn" id="22_17k15"]
 [ext_resource type="Texture2D" uid="uid://ertncploc478" path="res://assets/pictures/corridor_sliding_door9.png" id="22_j8rwr"]
 [ext_resource type="Texture2D" uid="uid://cme77gvv33a8o" path="res://assets/pictures/corridor_sliding_door11.png" id="23_6r8m2"]
 [ext_resource type="Texture2D" uid="uid://dcy1ahdlcv12i" path="res://assets/pictures/corridor_sliding_door10.png" id="24_snuuv"]
@@ -168,6 +168,7 @@ visible = false
 position = Vector2(-291, -21)
 script = ExtResource("9_7364v")
 destination = 4
+debug = false
 
 [node name="Door" parent="." instance=ExtResource("4_ako47")]
 unique_name_in_owner = true

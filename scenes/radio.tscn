@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://dc1jmnnl2qljv"]
+
+[ext_resource type="Script" path="res://scripts/radio_tuner.gd" id="1_5sob5"]
+[ext_resource type="Shader" path="res://shaders/transparentdark.gdshader" id="2_tpwwd"]
+[ext_resource type="Texture2D" uid="uid://dp0b18y3a16os" path="res://assets/pictures/radio.png" id="3_3vs57"]
+[ext_resource type="Texture2D" uid="uid://cp3a5ja4i74nc" path="res://assets/pictures/radio_marker.png" id="4_yjhfn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uxf8c"]
+shader = ExtResource("2_tpwwd")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yb35t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lhupk"]
+
+[node name="Radio" type="CanvasLayer"]
+script = ExtResource("1_5sob5")
+
+[node name="TransparentDark" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_uxf8c")
+position = Vector2(1007, 472)
+scale = Vector2(17.1994, 18.2426)
+texture = ExtResource("3_3vs57")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(960, 540)
+scale = Vector2(6, 6)
+texture = ExtResource("3_3vs57")
+
+[node name="Control" type="Control" parent="."]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+offset_left = -60.0
+offset_top = -45.0
+offset_right = -20.0
+offset_bottom = -5.0
+scale = Vector2(2, 2)
+
+[node name="HSlider" type="HSlider" parent="Control"]
+layout_mode = 0
+offset_left = 409.5
+offset_top = 309.0
+offset_right = 606.5
+offset_bottom = 339.0
+mouse_default_cursor_shape = 2
+theme_override_icons/grabber = ExtResource("4_yjhfn")
+theme_override_icons/grabber_highlight = ExtResource("4_yjhfn")
+theme_override_icons/grabber_disabled = ExtResource("4_yjhfn")
+theme_override_styles/slider = SubResource("StyleBoxEmpty_yb35t")
+theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_lhupk")
