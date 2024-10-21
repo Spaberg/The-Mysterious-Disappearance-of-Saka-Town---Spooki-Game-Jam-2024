@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://c3n77sjqh0ebj"]
+[gd_scene load_steps=28 format=3 uid="uid://c3n77sjqh0ebj"]
 
 [ext_resource type="Script" path="res://scripts/corridoreffects.gd" id="1_fmgto"]
 [ext_resource type="Texture2D" uid="uid://dv4gjbn2pknyk" path="res://assets/textures/256x256_textures_101.png" id="2_3nrvw"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cg2v3maimdlql" path="res://scenes/door.tscn" id="4_ako47"]
 [ext_resource type="AudioStream" uid="uid://dyrbhc55qjn8q" path="res://audio/environment/electronics/380660__arseniiv__fluorescent-lamp-flickering.wav" id="5_ba14d"]
 [ext_resource type="AudioStream" uid="uid://x1c06wbuq0v8" path="res://audio/environment/life/371314__freemaster2__creepy-chorus-of-crows.wav" id="5_x7kjg"]
+[ext_resource type="Script" path="res://endJump.gd" id="9_7364v"]
 [ext_resource type="Texture2D" uid="uid://bwfyh8hy5sawd" path="res://assets/pictures/corridor_sliding_door1.png" id="14_3r4eu"]
 [ext_resource type="Texture2D" uid="uid://b7iqofxayv383" path="res://assets/pictures/corridor_sliding_door2.png" id="15_o10p1"]
 [ext_resource type="Texture2D" uid="uid://cshkkuxaq7mal" path="res://assets/pictures/corridor_sliding_door3.png" id="16_eblun"]
@@ -165,6 +166,7 @@ texture = ExtResource("2_3nrvw")
 [node name="Door2" parent="." instance=ExtResource("4_ako47")]
 visible = false
 position = Vector2(-291, -21)
+script = ExtResource("9_7364v")
 destination = 4
 
 [node name="Door" parent="." instance=ExtResource("4_ako47")]
