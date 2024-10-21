@@ -4,6 +4,7 @@ signal display_poster
 var poster_scene = preload("res://radio.tscn")
 var poster_instance
 var consumed = false
+@export var enabled : bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,7 +19,6 @@ func _process(delta: float) -> void:
 	elif (Input.is_action_just_released("Interact") and is_collision and Global.pausing and not consumed):
 		Global.hide_poster()
 		poster_instance = poster_scene.instantiate()
-	pass
 
 func _on_area_entered(area):
 	if not consumed:

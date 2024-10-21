@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://c3n77sjqh0ebj"]
+[gd_scene load_steps=29 format=3 uid="uid://c3n77sjqh0ebj"]
 
 [ext_resource type="Script" path="res://scripts/corridoreffects.gd" id="1_fmgto"]
 [ext_resource type="Texture2D" uid="uid://dv4gjbn2pknyk" path="res://assets/textures/256x256_textures_101.png" id="2_3nrvw"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://ctt5msx7u8isi" path="res://assets/pictures/double_doors.png" id="20_g1ggx"]
 [ext_resource type="Texture2D" uid="uid://c4nj8wpnvqfse" path="res://assets/pictures/corridor_sliding_door7.png" id="20_vxol2"]
 [ext_resource type="Texture2D" uid="uid://b6a0bqdn6s4fm" path="res://assets/pictures/corridor_sliding_door8.png" id="21_yd3jc"]
+[ext_resource type="PackedScene" uid="uid://48erot7tt37k" path="res://radio_small.tscn" id="22_17k15"]
 [ext_resource type="Texture2D" uid="uid://ertncploc478" path="res://assets/pictures/corridor_sliding_door9.png" id="22_j8rwr"]
 [ext_resource type="Texture2D" uid="uid://cme77gvv33a8o" path="res://assets/pictures/corridor_sliding_door11.png" id="23_6r8m2"]
 [ext_resource type="Texture2D" uid="uid://dcy1ahdlcv12i" path="res://assets/pictures/corridor_sliding_door10.png" id="24_snuuv"]
@@ -158,7 +159,7 @@ occluder = SubResource("OccluderPolygon2D_2ymww")
 [node name="darklight2" type="PointLight2D" parent="."]
 position = Vector2(161, 89)
 scale = Vector2(27.7609, 5.42383)
-energy = 0.9
+energy = 0.78
 blend_mode = 1
 texture = ExtResource("2_3nrvw")
 
@@ -207,4 +208,17 @@ position = Vector2(91, 1)
 position = Vector2(161, 95)
 shape = SubResource("RectangleShape2D_0108h")
 
+[node name="Radio" parent="." instance=ExtResource("22_17k15")]
+unique_name_in_owner = true
+position = Vector2(364, 91)
+attenuation = 15
+
+[node name="Interaction point except its for the radio" parent="Radio" index="0"]
+script = null
+
+[node name="RadioVoices" parent="Radio" index="1"]
+attenuation = 11.3137
+
 [connection signal="area_entered" from="Node2D/Area2DTrigger" to="." method="_on_area_entered"]
+
+[editable path="Radio"]

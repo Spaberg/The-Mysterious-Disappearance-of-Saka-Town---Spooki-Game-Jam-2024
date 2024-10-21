@@ -29,3 +29,4 @@ func _on_area_entered(area):
 		sliding_door_triggered = true
 		%AnimatedDoor.play("moving")
 		%ClosedSlidingDoor.visible = false
+		%Radio.attenuation = 5

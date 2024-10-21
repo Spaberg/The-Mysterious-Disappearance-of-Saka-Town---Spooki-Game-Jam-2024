@@ -31,4 +31,5 @@ func _on_add_poster(scene_instance):
 	poster_scene = scene_instance
 	
 func _on_remove_poster():
-	poster_scene.queue_free()
+	if poster_scene != null:
+		poster_scene.queue_free()
