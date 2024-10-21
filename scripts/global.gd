@@ -4,6 +4,7 @@ var resolution_scale : int = 6
 
 var radio_pct : float = 0
 var radio_has_been_triggered : bool = false
+var player_is_entering_door : bool = false
 
 enum DESTINATION {MountainTrailStart = 0, MountainTrailEnd, HospitalEntrance, CorridorEntrance,RadioRoomEntrance,RadioRoomOut}
 var pausing :bool=false
@@ -15,10 +16,8 @@ var destination_coordinates = {
 	DESTINATION.RadioRoomOut: Vector2(-3259,14421),
 }
 
-# Is this essentially just signal processing?
-
+# When you took a course in signal processing
 signal radio_triggered
-
 signal teleported
 signal add_poster
 signal remove_poster

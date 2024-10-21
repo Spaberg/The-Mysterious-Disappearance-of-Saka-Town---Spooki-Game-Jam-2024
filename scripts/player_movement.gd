@@ -59,6 +59,10 @@ func _physics_process(delta: float) -> void:
 
 func _on_teleported(destination):
 	global_position = Global.destination_coordinates[destination]
+	if destination == Global.DESTINATION.RadioRoomEntrance:
+		sprite.flip_h = true
+	else:
+		sprite.flip_h = false
 
 func _on_sprite_animation_looped() -> void:
 	if player_state == State.TURNING:
