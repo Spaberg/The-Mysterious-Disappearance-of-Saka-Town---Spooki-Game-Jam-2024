@@ -8,7 +8,7 @@ var player_state : State = State.STANDING
 
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
 
-var movement_speed_multi : int = 1
+var movement_speed_multi : int = 10
 
 var run_speed := 25.0*Global.resolution_scale*movement_speed_multi
 

@@ -148,7 +148,6 @@ visible = false
 position = Vector2(26.6666, -1.52588e-05)
 scale = Vector2(20, 20)
 stream = ExtResource("5_ba14d")
-autoplay = true
 max_distance = 2160.0
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite2D"]
@@ -188,6 +187,11 @@ animation = &"moving"
 frame = 10
 frame_progress = 1.0
 
+[node name="ClosedSlidingDoor" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(158, 88)
+texture = ExtResource("14_3r4eu")
+
 [node name="longer corridor" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(1121, 89)
@@ -203,5 +207,4 @@ position = Vector2(91, 1)
 position = Vector2(161, 95)
 shape = SubResource("RectangleShape2D_0108h")
 
-[connection signal="finished" from="Door/AudioStreamPlayer2D" to="." method="_on_audio_finished"]
 [connection signal="area_entered" from="Node2D/Area2DTrigger" to="." method="_on_area_entered"]
