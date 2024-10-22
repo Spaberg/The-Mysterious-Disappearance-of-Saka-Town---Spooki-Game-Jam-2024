@@ -6,7 +6,7 @@ Welcome to the GitHub repository for **The Mysterious Disappearance of Saka Town
 This repository is **not open-source**. While it's publicly accessible, the code and assets are copyrighted and cannot be used, modified, or distributed without permission. The primary goal of this repo is to showcase the game created during the jam and to keep a history of the work done.
 
 ## 👻 About the Game and Jam
-- [**itch.io Page**](https://wsnordenmark.itch.io/the-mysterious-disappearance-of-saka-town)  
+[**Go to itch.io game page**](https://wsnordenmark.itch.io/the-mysterious-disappearance-of-saka-town)  
 - **Game Jam**: [Spooki Game Jam 2024](https://itch.io/jam/spooky-jam-2024)
 - **Theme**: See [The Theme](./the_theme.png)
 - **Jam duration**: 48 hours
