@@ -21,4 +21,4 @@ Due to the tight time constraints of the game jam, the code may contain:
 Please bear in mind that this is a **jam project**, so the focus was on getting things done rather than on code quality.
 
 ## License
-This project is licensed under Attribution-NonCommercial 4.0 International. For more details, please refer to the [LICENSE](./LICENSE.txt) file. **This code and assets are not available for commercial use or redistribution** without explicit permission.
+This project is licensed under Creative Commons Attribution-NonCommercial 4.0 International Public License. For more details, please refer to the [LICENSE](./LICENSE.txt) file. **This code and assets are not available for commercial use or redistribution** without explicit permission.
