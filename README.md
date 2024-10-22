@@ -7,9 +7,9 @@ This repository is **not open-source**. While it's publicly accessible, the code
 
 ## 👻 About the Game and Jam
 - **Game Jam**: Spooki Game Jam 2024
-- **Theme**: [See [the theme](./the_theme.png)]
+- **Theme**: See [The Theme](./the_theme.png)
 - **Jam duration**: 48 hours
-- **Developers**: [David Spaberg, William Sevelin Nordenmark, Simon Andersson, Alva Svensson, Dian Shi]
+- **Developers**: [David Spaberg], [William Sevelin Nordenmark], [Simon Andersson], [Alva Svensson], [Dian Shi](https://github.com/deanxox)
 - **Date**: October 2024
 
 ## 🏃‍♂️ Fast Development Process
