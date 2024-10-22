@@ -16,7 +16,6 @@ This repository is **not open-source**. While it's publicly accessible, the code
 Due to the tight time constraints of the game jam, the code may contain:
 - **Incomplete features**: Some ideas were cut or left unfinished to meet the deadline.
 - **Hardcoded values**: Time pressures meant we had to take some shortcuts.
-- **Lack of optimization**: Performance improvements were skipped in favor of speed of implementation.
 - **Quick fixes**: Bugs were squashed on the fly with simple and sometimes dirty fixes.
   
 Please bear in mind that this is a **jam project**, so the focus was on getting things done rather than on code quality.
