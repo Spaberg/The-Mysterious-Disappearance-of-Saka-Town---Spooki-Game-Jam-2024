@@ -49,11 +49,8 @@ func start_slideshow() -> void:
 	$AnimationPlayer.play("fade_sound")
 	slideshow.visible = false
 	await get_tree().create_timer(3).timeout
-	Player.get_child(0).velocity = Vector2.ZERO
 	
-	Player.get_child(0).global_position = Vector2(-4971, 300)	# Temp fix by Spaberg
-	
-	get_tree().change_scene_to_packed(main_scene)	
+	get_tree().change_scene_to_packed(main_scene)
 	
 
 func make_text_array(text : String):

@@ -38,3 +38,7 @@ func _ready() -> void:
 	await get_tree().create_timer(randf()).timeout
 	$AnimatedSprite2D12.visible = true
 	$AnimatedSprite2D12.play()
+
+
+func _on_the_end_timeout():
+	$ColorRect.visible = true

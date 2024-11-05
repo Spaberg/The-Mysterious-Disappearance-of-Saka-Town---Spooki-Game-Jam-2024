@@ -55,7 +55,7 @@ bus = &"MountainTrail"
 stream = ExtResource("5_6pwka")
 volume_db = -22.0
 autoplay = true
-max_distance = 20000.0
+max_distance = 10000.0
 panning_strength = 0.5
 bus = &"MountainTrail"
 

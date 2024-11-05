@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://deotlas1gofd8"]
+[gd_scene load_steps=5 format=3 uid="uid://deotlas1gofd8"]
 
 [ext_resource type="Script" path="res://scenes/endscene.gd" id="1_hhg4c"]
 [ext_resource type="PackedScene" uid="uid://cmo6koiyukaqo" path="res://scenes/end_eye.tscn" id="2_hisfg"]
-[ext_resource type="AudioStream" uid="uid://bpjxhmupjt6hi" path="res://audio/environment/radio/ending_sound.ogg" id="3_mvchs"]
+[ext_resource type="AudioStream" uid="uid://cv2arq32msvcr" path="res://audio/SpookiGameJamEnding.wav" id="3_bkfh1"]
+[ext_resource type="FontFile" uid="uid://bxt3gt7ljffnm" path="res://fonts/return-of-ganon/retganon.ttf" id="4_jq6ci"]
 
 [node name="Endscene" type="Node2D"]
 scale = Vector2(6, 6)
@@ -69,5 +70,42 @@ visible = false
 position = Vector2(246.667, 102.167)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_mvchs")
+stream = ExtResource("3_bkfh1")
 autoplay = true
+
+[node name="TheEnd" type="Timer" parent="."]
+wait_time = 30.0
+one_shot = true
+autostart = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+z_index = 1
+offset_left = -6.0
+offset_top = -5.0
+offset_right = 327.0
+offset_bottom = 189.0
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+z_index = 1
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -7.0
+offset_right = 24.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("4_jq6ci")
+bbcode_enabled = true
+text = "[center]The End..."
+fit_content = true
+scroll_active = false
+
+[connection signal="timeout" from="TheEnd" to="." method="_on_the_end_timeout"]
