@@ -1,4 +1,4 @@
-# 🎃 Spooki Game Jam 2024 - The Mysterious Disappearance of Saka Town
+# 🎃 Spooky Game Jam 2024 - The Mysterious Disappearance of Saka Town
 
 Welcome to the GitHub repository for **The Mysterious Disappearance of Saka Town**, a game developed in 48 hours during the **Spooki Game Jam 2024**. This was a fast-paced, fun, and chaotic project, and the main focus was to deliver a playable game within a short timeframe. Please note that the code quality and commit messages may not reflect best practices due to the rushed nature of the game jam.
 
@@ -7,7 +7,7 @@ This repository is **not open-source**. While it's publicly accessible, the code
 
 ## 👻 About the Game and Jam
 [**Go to itch.io Game Page**](https://wsnordenmark.itch.io/the-mysterious-disappearance-of-saka-town)  
-- **Game Jam**: [Spooki Game Jam 2024](https://itch.io/jam/spooky-jam-2024)
+- **Game Jam**: [Spooky Game Jam 2024](https://itch.io/jam/spooky-jam-2024)
 - **Theme**: See [The Theme](./the_theme.png)
 - **Jam duration**: 48 hours
 - **Developers**: [David Spaberg](https://github.com/Spaberg), [William Sevelin Nordenmark](https://github.com/wsnordenmark), [Simon Andersson](https://github.com/4point5tatamiideologue), [Alva Svensson](https://github.com/alvasvensson), [Dian Shi](https://github.com/deanxox)
